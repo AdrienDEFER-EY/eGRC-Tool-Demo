@@ -600,14 +600,20 @@
     "'GAL-EditControlsOfRisk' As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =324
-        Items: |-
-            =Filter(
+        Items: |
+            =/*Filter(
                 ControlDatabaseFD,
                 ControlID in Filter(
                     RelationRC_DB,
                     RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
                 ).ControlID
-            )
+            )*/
+            
+            With({linkedControls1: Filter(
+                    RelationRC_DB,
+                    RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
+                ).ControlID}, Filter(
+                ControlDatabaseFD, ControlID in linkedControls1))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -690,6 +696,9 @@
         Icon6 As icon.Save:
             Height: =52
             Icon: =Icon.Save
+            OnSelect: |-
+                =SubmitForm(EditRiskForm);
+                Navigate('Risk Overview Screen')
             Width: =54
             X: =196
             Y: =15
