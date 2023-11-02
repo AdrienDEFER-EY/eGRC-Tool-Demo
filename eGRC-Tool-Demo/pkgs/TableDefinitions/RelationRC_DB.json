@@ -1,0 +1,7 @@
+{
+  "DataEntityMetadataJson": {
+    "{FDB5DDE6-14BB-443E-9997-81864E7F4B61}": "{\"name\":\"{FDB5DDE6-14BB-443E-9997-81864E7F4B61}\",\"title\":\"RelationRC_DB\",\"x-ms-permission\":\"read-write\",\"x-ms-capabilities\":{\"sortRestrictions\":{\"sortable\":true},\"filterRestrictions\":{\"filterable\":true},\"filterFunctionSupport\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"schema\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"RiskID\":{\"type\":\"string\",\"title\":\"RiskID\",\"x-ms-sort\":\"none\",\"x-ms-capabilities\":{\"filterFunctions\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"x-ms-permission\":\"read-write\"},\"ControlID\":{\"type\":\"string\",\"title\":\"ControlID\",\"x-ms-sort\":\"none\",\"x-ms-capabilities\":{\"filterFunctions\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"x-ms-permission\":\"read-write\"}}}}}"
+  },
+  "EntityName": "RelationRC_DB",
+  "TableName": "{FDB5DDE6-14BB-443E-9997-81864E7F4B61}"
+}

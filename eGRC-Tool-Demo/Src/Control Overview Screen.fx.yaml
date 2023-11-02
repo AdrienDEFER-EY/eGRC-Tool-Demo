@@ -1,0 +1,1698 @@
+"'Control Overview Screen' As screen":
+    OnVisible: |-
+        =// Close the hamburger menu when the page is loaded
+        UpdateContext({OpenMenu: false});
+        
+        // Close all the hamburger menu option windows when the page is loaded
+        UpdateContext({AddControl: false});
+        UpdateContext({FilterOption: false});
+        UpdateContext({SortOption: false});
+        UpdateContext({SearchOption: false});
+        UpdateContext({DeleteOption: false});
+        
+        // Close the window showing the information and the modification of a selected record
+        UpdateContext({MoreInformationRequested: false});
+        UpdateContext({EditOption: false});
+
+    "'COS-CON-ScreenHeader' As groupContainer.manualLayoutContainer":
+        Height: =76
+        Width: =1278 - 'COS-HM-SHA-HamburgerMenuYellowBackground'.Width + 88
+        X: ='COS-HM-SHA-HamburgerMenuYellowBackground'.Width
+        ZIndex: =2
+
+        "'COS-CON-SHA-YellowRectangleHeader' As rectangle":
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =76
+            Width: =1278 - 'COS-HM-SHA-HamburgerMenuYellowBackground'.Width + 88
+            ZIndex: =1
+
+        "'COS-CON-LBL-RiskOverviewTitle' As label":
+            Align: =Align.Center
+            Font: =Font.Georgia
+            Height: =76
+            Size: =30
+            Text: ="CONTROL OVERVIEW"
+            Width: =1278 - 'COS-HM-SHA-HamburgerMenuYellowBackground'.Width + 88
+            ZIndex: =2
+
+    "'COS-CON-HamburgerMenu' As groupContainer.manualLayoutContainer":
+        Height: =768
+        Width: =If(OpenMenu, Max(App.Width, App.DesignWidth)/7, 88)
+        ZIndex: =3
+
+        "'COS-HM-SHA-HamburgerMenuYellowBackground' As rectangle":
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =768
+            Width: =If(OpenMenu, Max(App.Width, App.DesignWidth)/7, 88)
+            ZIndex: =1
+
+        "'COS-HM-ICO-HamburgerMenuIcon' As icon.Hamburger":
+            Icon: =Icon.Hamburger
+            OnSelect: |
+                =// Extend/Hide the hamburger menu
+                UpdateContext({OpenMenu: !OpenMenu});
+                
+                // Close all the hamburger menu windows
+                If(AddControl, UpdateContext({AddControl: !AddControl}));
+                If(FilterOption, UpdateContext({FilterOption: !FilterOption}));
+                If(SortOption, UpdateContext({SortOption: !SortOption}));
+                If(SearchOption, UpdateContext({SearchOption: !SearchOption}));
+                If(DeleteOption, UpdateContext({DeleteOption: !DeleteOption}));
+                If(EditOption, UpdateContext({EditOption: !EditOption}));
+                If(MoreInformationRequested, UpdateContext({MoreInformationRequested: !MoreInformationRequested}));
+            X: =12
+            ZIndex: =2
+
+        "'COS-HM-CON-HomeButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =76
+            ZIndex: =3
+
+            "'COS-HM-HB-ICO-HomeButtonIcon' As icon.Home":
+                Height: =67
+                Icon: =Icon.Home
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-HB-LBL-HomeButtonLabel' As label":
+                Height: =64
+                Text: ="Home"
+                Width: =Parent.Width - 88
+                X: =88
+                Y: =3
+                ZIndex: =2
+
+            "'COS-HM-HB-BTN-HomeButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// Navigate to the home screen
+                    Navigate('Home Screen')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-AddButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =155
+            ZIndex: =4
+
+            "'COS-HM-AB-ICO-AddButtonIcon' As icon.Add":
+                Height: =67
+                Icon: =Icon.Add
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-AB-LBL-AddButtonLabel' As label":
+                Height: =67
+                Text: ="Add"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-AB-BTN-AddButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// Open the hamburger menu to let the "Submit" and the "Clear" buttons visible
+                    UpdateContext({OpenMenu: true});
+                    
+                    // Open/Close the "Add Control" option menu
+                    UpdateContext({AddControl: !AddControl});
+                    
+                    // Close all the other hamburger menu option windows
+                    UpdateContext({FilterOption: false});
+                    UpdateContext({SortOption: false});
+                    UpdateContext({SearchOption: false});
+                    UpdateContext({DeleteOption: false});
+                    
+                    // Close the window showing the information and the modification of a selected record
+                    UpdateContext({MoreInformationRequested: false});
+                    UpdateContext({EditOption: false});
+                    
+                    // Reset the form in case some information is already there
+                    ResetForm('COS-OC-AC-FOR-AddingControlForm')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-FilterButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =234
+            ZIndex: =5
+
+            "'COS-HM-FB-ICO-FilterButtonIcon' As icon.Filter":
+                Height: =67
+                Icon: =Icon.Filter
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-FB-LBL-FilterButtonLabel' As label":
+                Height: =67
+                Text: ="Filter"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-FB-BTN-FilterButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// Open the hamburger menu to let the "Clear" and the "Add Criteria" buttons visible
+                    UpdateContext({OpenMenu: true});
+                    
+                    // Open/Close the "Filter" option menu
+                    UpdateContext({FilterOption: !FilterOption});
+                    
+                    // Close all the other hamburger menu option windows
+                    UpdateContext({SortOption: false});
+                    UpdateContext({SearchOption: false});
+                    UpdateContext({DeleteOption: false});
+                    UpdateContext({AddControl: false});
+                    
+                    // Close the window showing the information and the modification of a selected record
+                    UpdateContext({MoreInformationRequested: false});
+                    UpdateContext({EditOption: false});
+                    
+                    // Set the number of filter criteria to 1
+                    UpdateContext({NumberOfSelectedFilterCriteria: 1});
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-SortButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =313
+            ZIndex: =6
+
+            "'COS-HM-SB-ICO-SortButtonIcon' As icon.ArrowsUpDown":
+                Height: =67
+                Icon: =Icon.Sort
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-SB-LBL-SortButtonLabel' As label":
+                Height: =67
+                Text: ="Sort"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-SB-BTN-SortButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// Open the hamburger menu to let the "Clear" and the "Add Criteria" buttons visible
+                    UpdateContext({OpenMenu: true});
+                    
+                    // Open/Close the "Filter" option menu
+                    UpdateContext({SortOption: !SortOption});
+                    
+                    // Close all the other hamburger menu option windows
+                    UpdateContext({SearchOption: false});
+                    UpdateContext({DeleteOption: false});
+                    UpdateContext({AddControl: false});
+                    UpdateContext({FilterOption: false});
+                    
+                    // Close the window showing the information and the modification of a selected record
+                    UpdateContext({MoreInformationRequested: false});
+                    UpdateContext({EditOption: false});
+                    
+                    // Set the number of filter criteria to 1
+                    UpdateContext({NumberOfSelectedSortingCriteria: 1});
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-SearchButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =392
+            ZIndex: =7
+
+            "'COS-HM-SB-ICO-SearchButtonIcon' As icon.Search":
+                Height: =67
+                Icon: =Icon.Search
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-SB-LBL-SearchButtonLabel' As label":
+                Height: =67
+                Text: ="Search"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-SB-BTN-SearchButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// No need to open the open the hamburger menu
+                    
+                    // Open/Close the "Search" option menu
+                    UpdateContext({SearchOption: !SearchOption});
+                    
+                    // Close all the other hamburger menu option windows
+                    UpdateContext({DeleteOption: false});
+                    UpdateContext({AddControl: false});
+                    UpdateContext({FilterOption: false});
+                    UpdateContext({SortOption: false});
+                    
+                    // Close the window showing the information and the modification of a selected record
+                    UpdateContext({MoreInformationRequested: false});
+                    UpdateContext({EditOption: false})
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-DeleteButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =471
+            ZIndex: =8
+
+            "'COS-HM-DB-ICO-DeleteButtonIcon' As icon.Trash":
+                Height: =67
+                Icon: =Icon.Trash
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-DB-LBL-DeleteButtonLabel' As label":
+                Height: =67
+                Text: ="Delete"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-DB-BTN-DeleteButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// No need to open the open the hamburger menu
+                    
+                    // Open/Close the "Delete" option menu
+                    UpdateContext({DeleteOption: !DeleteOption});
+                    
+                    // Close all the other hamburger menu option windows
+                    UpdateContext({AddControl: false});
+                    UpdateContext({FilterOption: false});
+                    UpdateContext({SortOption: false});
+                    UpdateContext({SearchOption: false});
+                    
+                    // Close the window showing the information and the modification of a selected record
+                    UpdateContext({MoreInformationRequested: false});
+                    UpdateContext({EditOption: false})
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-LinkToRisksButton' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =550
+            ZIndex: =9
+
+            "'COS_HM-LTRB-ICO-LinkToRisksIcon' As icon.Database":
+                Height: =67
+                Icon: =Icon.Database
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS_HM-LTRB-LBL-LinkToRisksLabel' As label":
+                Height: =67
+                Text: ="Risks"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS_HM-LTRB-BTN-LinkToRisksButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// Navigate to the risk overview screen
+                    Navigate('Risk Overview Screen')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-AddControlCheckButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =If(AddControl, true, false)
+            Width: =Parent.Width
+            Y: =668
+            ZIndex: =10
+
+            "'COS-HM-ACCB-ICO-AddControlCheckButtonIcon' As icon.CheckBadge":
+                Color: =Color.Green
+                Height: =50
+                Icon: =Icon.CheckBadge
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-ACCB-LBL-AddControlCheckButtonLabel' As label":
+                Height: =50
+                Text: ="Submit"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-ACCB-BTN-AddControlCheckButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =UpdateContext({GeneratedID: Text(RoundUp(Rand() * 100000, 0), "00000")});
+                    Patch(
+                        ControlDatabaseFD,
+                        Defaults(ControlDatabaseFD),  // Retain existing values in the record
+                        {
+                            ControlID: "ID" & GeneratedID,
+                            'Control Name': ControlNameValue.Text,
+                            'Control Description': ControlDescriptionValue.Text
+                        }
+                    );
+                    //SubmitForm('FOR-ROAddingRiskForm');
+                    Notify("New control successfully created");
+                    //UpdateContext(ROAddRisk, false)
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-AddControlCancelButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =If(AddControl, true, false)
+            Width: =Parent.Width
+            Y: =718
+            ZIndex: =11
+
+            "'COS-HM-ACCB-ICO-AddControlCancelButtonIcon' As icon.CancelBadge":
+                Color: =Color.Red
+                Height: =50
+                Icon: =Icon.CancelBadge
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-ACCB-LBL-AddControlCancelButtonLabel' As label":
+                Height: =50
+                Text: ="Clear"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-ACCB-BTN-AddControlCancelButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: =ResetForm('COS-OC-AC-FOR-AddingControlForm')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-SortControlAddCriteriaButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =If(SortOption, true, false)
+            Width: =Parent.Width
+            Y: =718
+            ZIndex: =12
+
+            "'COS-HM-SCACB-ICO-SortControlAddCriteriaButtonIcon' As icon.Add":
+                Height: =50
+                Icon: =Icon.Add
+                OnSelect: =
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-SCACB-LBL-SortControlAddCriteriaButtonLabel' As label":
+                Height: =50
+                Text: ="Add Criteria"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-SCACB-BTN-SortControlAddCriteriaButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =If(NumberOfSelectedSortingCriteria < 3, UpdateContext({NumberOfSelectedSortingCriteria: NumberOfSelectedSortingCriteria + 1}))
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-SortControlClearCriteriaButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =If(SortOption, true, false)
+            Width: =Parent.Width
+            Y: =668
+            ZIndex: =13
+
+            "'COS-HM-SCCCB-ICO-SortControlCancelCriteriaButtonIcon' As icon.Reset":
+                Height: =50
+                Icon: =Icon.Reset
+                OnSelect: =
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-SCCCB-LBL-SortControlCancelCriteriaButtonLabel' As label":
+                Height: =50
+                Text: ="Clear"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-SCCCB-BTN-SortControlCancelCriteriaButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =Reset('COS-OC-SOO-C1-DD-ColumnChoice');
+                    Reset('COS-OC-SOO-C1-DD-OrderChoice');
+                    Reset('COS-OC-SOO-C2-DD-ColumnChoice');
+                    Reset('COS-OC-SOO-C2-DD-OrderChoice');
+                    Reset('COS-OC-SOO-C3-DD-ColumnChoice');
+                    Reset('COS-OC-SOO-C3-DD-OrderChoice')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-SaveEditControlButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =EditOption
+            Width: =Parent.Width
+            Y: =718
+            ZIndex: =14
+
+            "'COS-HM-SECB-ICO-SaveEditControlButtonIcon' As icon.Save":
+                Height: =50
+                Icon: =Icon.Save
+                OnSelect: |-
+                    =UpdateContext({EditOption: false});
+                    SubmitForm('COS-ER-FOR-EditControl');
+                    //Patch(ControlDatabaseFD, LookUp(ControlDatabaseFD, ControlID = 'GAL-ROGallery_1'.Selected.ControlID), {'Date Last Modified': Now(), 'Who Last Modified': User().FullName}); 
+                    Notify("Control is successfully modified")
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-SECB-BTN-SaveEditControlButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =UpdateContext({DeleteOption: false});
+                    UpdateContext({EditOption: false});
+                    UpdateContext({SearchOption: false});
+                    UpdateContext({SortOption: false});
+                    UpdateContext({FilterOption: false});
+                    UpdateContext({ROAddRisk: false});
+                    UpdateContext({MoreInformationRequested: false})
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-CancelEditControlButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =EditOption
+            Width: =Parent.Width
+            Y: =668
+            ZIndex: =15
+
+            "'COS-HM-CERB-ICO-CancelEditControlButtonIcon' As icon.CancelBadge":
+                Height: =50
+                Icon: =Icon.CancelBadge
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-CERB-BTN-CancelEditControlButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =UpdateContext({DeleteOption: false});
+                    UpdateContext({EditOption: false});
+                    UpdateContext({SearchOption: false});
+                    UpdateContext({SortOption: false});
+                    UpdateContext({FilterOption: false});
+                    UpdateContext({ROAddRisk: false});
+                    UpdateContext({MoreInformationRequested: false})
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-FilterControlAddCriteriaButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =If(FilterOption, true, false)
+            Width: =Parent.Width
+            Y: =718
+            ZIndex: =16
+
+            "'COS-HM-FCACB-ICO-FilterControlAddCriteriaButtonIcon' As icon.Add":
+                Height: =50
+                Icon: =Icon.Add
+                OnSelect: =
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-FCACB-LBL-FilterControlAddCriteriaButtonLabel' As label":
+                Height: =50
+                Text: ="Add Criteria"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-FCACB-BTN-FilterControlAddCriteriaButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =If(NumberOfSelectedFilterCriteria < 3, UpdateContext({NumberOfSelectedFilterCriteria: NumberOfSelectedFilterCriteria + 1}))
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-FilterControlClearCriteriaButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =If(FilterOption, true, false)
+            Width: =Parent.Width
+            Y: =668
+            ZIndex: =17
+
+            "'COS-HM-FCCCB-ICO-FilterControlClearCriteriaButtonIcon' As icon.Reset":
+                Height: =50
+                Icon: =Icon.Reset
+                OnSelect: =
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-FCCCB-LBL-FilterControlClearCriteriaButtonLabel' As label":
+                Height: =50
+                Text: ="Clear"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'COS-HM-FCCCB-BTN-FilterControlClearCriteriaButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =Reset('COS-OC-FO-C1-DD-ColumnChoiceC1');
+                    Reset('COS-OC-FO-C2-DD-ColumnChoiceC2');
+                    Reset('COS-OC-FO-C3-DD-ColumnChoiceC3');
+                    Reset('COS-OC-FO-C1-INP-InputC1');
+                    Reset('COS-OC-FO-C2-INP-InputC2');
+                    Reset('COS-OC-FO-C3-INP-InputC3')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'COS-HM-CON-ExitMoreInformationButton' As groupContainer.manualLayoutContainer":
+            Height: =50
+            Visible: =MoreInformationRequested
+            Width: =Parent.Width
+            Y: =718
+            ZIndex: =18
+
+            "'COS-HM-EMIB-ICO-MoreInformationExitIcon' As icon.CancelBadge":
+                Height: =50
+                Icon: =Icon.CancelBadge
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'COS-HM-EMIB-BTN-MoreInformationExitButton' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =50
+                HoverFill: =
+                OnSelect: |-
+                    =// Close the more information requested window
+                    UpdateContext({MoreInformationRequested: false});
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =2
+
+    "'COS-GAL-Gallery' As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =If(MoreInformationRequested, 692 - 'COS-MIR-SHA-YellowBackground'.Height, 692)
+        Items: |-
+            =If(
+            	SearchOption,
+            	Filter(
+                    ControlDatabaseFD, 
+                    StartsWith(Text(ControlID), 'COS-OC-SO-INP-SearchInput'.Text) Or
+                    StartsWith(Text('Control Name'), 'COS-OC-SO-INP-SearchInput'.Text) Or
+                    StartsWith(Text('Control Description'), 'COS-OC-SO-INP-SearchInput'.Text) 
+                ),
+                	If(
+            		SortingButtonPressed,
+            		SortedData,
+            		If(
+            			FilterOption,
+            			If(
+            				'COS-OC-FO-CON-Criteria1'.Visible,
+            				Filter(
+                                ControlDatabaseFD,
+                                StartsWith(Text('COS-OC-FO-C1-DD-ColumnChoiceC1'.Selected.Value), 'COS-OC-FO-C1-INP-InputC1'.Text) Or
+                                Len('COS-OC-FO-C1-INP-InputC1'.Text) = 0
+                            ),
+            				If(
+            					'COS-OC-FO-CON-Criteria2'.Visible,
+            					Filter(
+                                    ControlDatabaseFD, 
+                                    StartsWith('COS-OC-FO-C1-DD-ColumnChoiceC1'.Selected.Value, 'COS-OC-FO-C1-INP-InputC1'.Text) And 
+                                    StartsWith('COS-OC-FO-C2-DD-ColumnChoiceC2'.Selected.Value, 'COS-OC-FO-C2-INP-InputC2'.Text) Or
+                                    Len('COS-OC-FO-C1-INP-InputC1'.Text) = 0 Or
+                                    Len('COS-OC-FO-C2-INP-InputC2'.Text) = 0
+                                ),
+            					If(
+            						'COS-OC-FO-CON-Criteria3'.Visible,
+            						Filter(
+                                        ControlDatabaseFD, 
+                                        StartsWith('COS-OC-FO-C1-DD-ColumnChoiceC1'.Selected.Value, 'COS-OC-FO-C1-INP-InputC1'.Text) And 
+                                        StartsWith('COS-OC-FO-C2-DD-ColumnChoiceC2'.Selected.Value, 'COS-OC-FO-C2-INP-InputC2'.Text) And 
+                                        StartsWith('COS-OC-FO-C3-DD-ColumnChoiceC3'.Selected.Value, 'COS-OC-FO-C3-INP-InputC3'.Text) Or
+                                        Len('COS-OC-FO-C1-INP-InputC1'.Text) = 0 Or
+                                        Len('COS-OC-FO-C2-INP-InputC2'.Text) = 0 Or
+                                        Len('COS-OC-FO-C3-INP-InputC3'.Text) = 0
+                                    )
+            					)
+            				)
+            			),
+            			ControlDatabaseFD
+            		)
+            	)
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =140
+        Width: =1278 - 'COS-HM-SHA-HamburgerMenuYellowBackground'.Width + 88 - 'COS-CON-OptionContainer'.Width
+        X: ='COS-HM-SHA-HamburgerMenuYellowBackground'.Width + 'COS-CON-OptionContainer'.Width
+        Y: =76
+        ZIndex: =5
+
+        "'COS-GAL-LBL-ControlHeader' As label":
+            Color: =RGBA(0, 0, 0, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.ControlID & " - " & ThisItem.'Control Name' 
+            VerticalAlign: =VerticalAlign.Top
+            Width: =442
+            X: =11
+            Y: =13
+            ZIndex: =2
+
+        "'COS-GAL-ICO-MoreInformationArrow' As icon.ChevronRight":
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =// Open the more information requested window
+                UpdateContext({MoreInformationRequested: !MoreInformationRequested});
+                
+                // Close all the other windows
+                UpdateContext({EditOption: false});
+                UpdateContext({AddControl: false});
+                UpdateContext({FilterOption: false});
+                UpdateContext({SortOption: false});
+                UpdateContext({SearchOption: false});
+                UpdateContext({DeleteOption: false});
+                
+                // Hide the hamburger menu
+                UpdateContext({OpenMenu: false});
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Visible: =If(DeleteOption, false, true)
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        "'COS-GAL-SHA-HorizontalSeparator' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =5
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =135
+            ZIndex: =5
+
+        "'COS-GAL-LBL-ControlDescriptionText' As label":
+            Font: =Font.Georgia
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Description : " & ThisItem.'Control Description'
+            VerticalAlign: =VerticalAlign.Top
+            Width: ='COS-GAL-LBL-ControlHeader'.Width
+            X: ='COS-GAL-LBL-ControlHeader'.X
+            Y: =46
+            ZIndex: =8
+
+        "'COS-GAL-ICO-Checkbox' As checkbox":
+            OnCheck: =If(ThisItem.IsSelected, Collect(SelectedRecords, ThisItem), Remove(SelectedRecords, ThisItem))
+            OnSelect: =Select(Parent)
+            Text: =""
+            Visible: =If(DeleteOption, true, false)
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =14
+
+        "'COS-GAL-ICO-EditControl' As icon.Edit":
+            Height: =36
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =// Open the edit information window
+                UpdateContext({EditOption: !EditOption});
+                
+                // Close all the other windows
+                UpdateContext({MoreInformationRequested: false});
+                UpdateContext({AddControl: false});
+                UpdateContext({FilterOption: false});
+                UpdateContext({SortOption: false});
+                UpdateContext({SearchOption: false});
+                UpdateContext({DeleteOption: false});
+                
+                // Hide the hamburger menu
+                UpdateContext({OpenMenu: false});
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =42
+            X: =300
+            Y: =7
+            ZIndex: =15
+
+    "'COS-CON-OptionContainer' As groupContainer.manualLayoutContainer":
+        Height: =692
+        Width: =If(AddControl, 500, If(Or(FilterOption, SortOption, SearchOption, DeleteOption), 300, 0))
+        X: ='COS-HM-SHA-HamburgerMenuYellowBackground'.Width
+        Y: =76
+        ZIndex: =11
+
+        "'COS-OC-CON-SortOption' As groupContainer.manualLayoutContainer":
+            Height: =692
+            RadiusBottomLeft: =1
+            RadiusBottomRight: =1
+            RadiusTopLeft: =1
+            RadiusTopRight: =1
+            Width: =If(SortOption, Parent.Width - 1, 0)
+            ZIndex: =1
+
+            "'COS-OC-SOO-SHA-YellowBackground' As rectangle":
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =Parent.Height
+                Width: =Parent.Width - 1
+                X: =1
+                ZIndex: =1
+
+            "'COS-OC-SOO-CON-Criteria1' As groupContainer.manualLayoutContainer":
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =190
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.Width - 1
+                X: =1
+                Y: =56
+                ZIndex: =3
+
+                "'COS-OC-SOO-C1-DD-ColumnChoice' As dropdown":
+                    Font: =Font.Georgia
+                    Items: =["ControlID", "Control Name", "Control Description"]
+                    Width: =251
+                    X: =23
+                    Y: =60
+                    ZIndex: =1
+
+                "'COS-OC-SOO-C1-DD-OrderChoice' As dropdown":
+                    Font: =Font.Georgia
+                    Items: =["Ascending", "Descending"]
+                    Width: =251
+                    X: =23
+                    Y: =140
+                    ZIndex: =2
+
+                "'COS-OC-SOO-C1-LBL-TitleC1' As label":
+                    Font: =Font.Georgia
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: |-
+                        ="Sorting Criteria I : "
+                    Width: =256
+                    ZIndex: =3
+
+                "'COS-OC-SOO-C1-LBL-ColumnChoiceText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Column Choice :"
+                    Width: =256
+                    X: =23
+                    Y: =30
+                    ZIndex: =4
+
+                "'COS-OC-SOO-C1-LBL-SearchBarText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Order Choice :"
+                    Width: =256
+                    X: =23
+                    Y: =110
+                    ZIndex: =5
+
+            "'COS-OC-SOO-CON-Criteria2' As groupContainer.manualLayoutContainer":
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =190
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Visible: =If(NumberOfSelectedSortingCriteria >= 2, true, false)
+                Width: =Parent.Width - 1
+                X: =1
+                Y: =246
+                ZIndex: =4
+
+                "'COS-OC-SOO-C2-DD-ColumnChoice' As dropdown":
+                    Font: =Font.Georgia
+                    Items: =["ControlID", "Control Name", "Control Description"]
+                    Width: =251
+                    X: =23
+                    Y: =60
+                    ZIndex: =1
+
+                "'COS-OC-SOO-C2-DD-OrderChoice' As dropdown":
+                    Font: =Font.Georgia
+                    Items: =["Ascending", "Descending"]
+                    Width: =251
+                    X: =23
+                    Y: =140
+                    ZIndex: =2
+
+                "'COS-OC-SOO-C2-LBL-TitleC2' As label":
+                    Font: =Font.Georgia
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: |-
+                        ="Sorting Criteria II : "
+                    Width: =256
+                    ZIndex: =3
+
+                "'COS-OC-SOO-C2-LBL-ColumnChoiceText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Column Choice :"
+                    Width: =256
+                    X: =23
+                    Y: =30
+                    ZIndex: =4
+
+                "'COS-OC-SOO-C2-LBL-SearchBarText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Order Choice :"
+                    Width: =256
+                    X: =23
+                    Y: =110
+                    ZIndex: =5
+
+                "'COS-OC-SOO-C2-ICO-DeleteC2' As icon.Cancel":
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =50
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =If(NumberOfSelectedSortingCriteria = 2, UpdateContext({NumberOfSelectedSortingCriteria: 1}))
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Visible: =If('COS-OC-SOO-C3-ICO-DeleteC3'.Visible, false, true)
+                    Width: =50
+                    X: =248
+                    ZIndex: =6
+
+            "'COS-OC-SOO-CON-Criteria3' As groupContainer.manualLayoutContainer":
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =190
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Visible: =If(NumberOfSelectedSortingCriteria = 3, true, false)
+                Width: =Parent.Width - 1
+                X: =1
+                Y: =436
+                ZIndex: =5
+
+                "'COS-OC-SOO-C3-DD-ColumnChoice' As dropdown":
+                    Font: =Font.Georgia
+                    Items: =["ControlID", "Control Name", "Control Description"]
+                    Width: =251
+                    X: =23
+                    Y: =60
+                    ZIndex: =1
+
+                "'COS-OC-SOO-C3-DD-OrderChoice' As dropdown":
+                    Font: =Font.Georgia
+                    Items: =["Ascending", "Descending"]
+                    Width: =251
+                    X: =23
+                    Y: =140
+                    ZIndex: =2
+
+                "'COS-OC-SOO-C3-LBL-TitleC3' As label":
+                    Font: =Font.Georgia
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: |-
+                        ="Sorting Criteria III : "
+                    Width: =256
+                    ZIndex: =3
+
+                "'COS-OC-SOO-C3-LBL-ColumnChoiceText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Column Choice :"
+                    Width: =256
+                    X: =23
+                    Y: =30
+                    ZIndex: =4
+
+                "'COS-OC-SOO-C3-LBL-SearchBarText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Order Choice :"
+                    Width: =256
+                    X: =23
+                    Y: =110
+                    ZIndex: =5
+
+                "'COS-OC-SOO-C3-ICO-DeleteC3' As icon.Cancel":
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =50
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =If(NumberOfSelectedSortingCriteria = 3, UpdateContext({NumberOfSelectedSortingCriteria: 2}))
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Visible: =If('COS-OC-SOO-CON-Criteria3'.Visible, true, false)
+                    Width: =50
+                    X: =248
+                    ZIndex: =6
+
+            "'COS-OC-SOO-BTN-SortingChoiceValidation' As button":
+                FontWeight: =FontWeight.Bold
+                OnSelect: |-
+                    =UpdateContext({SortingButtonPressed: true});
+                    UpdateContext({SelectedColumnCriteria1: 'COS-OC-SOO-C1-DD-ColumnChoice'.Selected.Value});
+                    UpdateContext({SelectedOrderCriteria1: 'COS-OC-SOO-C1-DD-OrderChoice'.Selected.Value});
+                    UpdateContext({SelectedColumnCriteria2: 'COS-OC-SOO-C2-DD-ColumnChoice'.Selected.Value});
+                    UpdateContext({SelectedOrderCriteria2: 'COS-OC-SOO-C2-DD-OrderChoice'.Selected.Value});
+                    UpdateContext({SelectedColumnCriteria3: 'COS-OC-SOO-C3-DD-ColumnChoice'.Selected.Value});
+                    UpdateContext({SelectedOrderCriteria3: 'COS-OC-SOO-C3-DD-OrderChoice'.Selected.Value});
+                    If(NumberOfSelectedSortingCriteria = 1, ClearCollect(SortedData, SortByColumns(ControlDatabaseFD, SelectedColumnCriteria1, SelectedOrderCriteria1)));
+                    If(NumberOfSelectedSortingCriteria = 2, ClearCollect(SortedData, SortByColumns(ControlDatabaseFD, SelectedColumnCriteria1, SelectedOrderCriteria1, SelectedColumnCriteria2, SelectedOrderCriteria2)));
+                    If(NumberOfSelectedSortingCriteria = 3, ClearCollect(SortedData, SortByColumns(ControlDatabaseFD, SelectedColumnCriteria1, SelectedOrderCriteria1, SelectedColumnCriteria2, SelectedOrderCriteria2, SelectedColumnCriteria3, SelectedOrderCriteria3)))
+                Text: ="Apply Sorting"
+                Width: =251
+                X: =24
+                Y: =If('COS-OC-SOO-CON-Criteria3'.Visible, (3 * 190) + 66, If('COS-OC-SOO-CON-Criteria2'.Visible, (2 * 190) + 66, If('COS-OC-SOO-CON-Criteria1'.Visible, (1 * 190) + 66)))
+                ZIndex: =7
+
+            "'COS-OC-SOO-LBL-Title' As label":
+                Align: =Align.Center
+                BorderThickness: =1
+                Font: =Font.Georgia
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =15
+                Text: ="Sorting Option"
+                Width: =299
+                ZIndex: =8
+
+        "'COS-OC-CON-DeleteOption' As groupContainer.manualLayoutContainer":
+            Height: =692
+            Width: =If(DeleteOption, Parent.Width - 1, 0)
+            ZIndex: =2
+
+            "'COS-OC-DO-SHA-YellowBackground' As rectangle":
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =Parent.Height
+                Width: =Parent.Width - 1
+                ZIndex: =1
+
+            "'COS-OC-DO-LBL-Title' As label":
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Font: =Font.Georgia
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                OnSelect: =ClearCollect(SelectedRecords, {})
+                Size: =15
+                Text: ="Delete Option"
+                Width: =Parent.Width - 1
+                ZIndex: =2
+
+            "'COS-OC-DO-BTN-DeleteRecords' As button":
+                OnSelect: |-
+                    =RemoveIf(ControlDatabaseFD, ControlID in SelectedRecords.ControlID); ClearCollect(SelectedRecords, {});
+                    Refresh(ControlDatabaseFD); Notify("The records are successfully deleted")
+                Text: ="Delete"
+                X: =69
+                Y: =206
+                ZIndex: =3
+
+        "'COS-OC-CON-SearchOption' As groupContainer.manualLayoutContainer":
+            Height: =692
+            Width: =If(SearchOption, Parent.Width - 1, 0)
+            ZIndex: =3
+
+            "'COS-OC-SO-SHA-YellowBackground' As rectangle":
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =Parent.Height
+                Width: =Parent.Width - 1
+                ZIndex: =1
+
+            "'COS-OC-SO-LBL-Title' As label":
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Font: =Font.Georgia
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =15
+                Text: ="Search Option"
+                Width: =Parent.Width - 1
+                ZIndex: =2
+
+            "'COS-OC-SO-INP-SearchInput' As text":
+                Default: =""
+                HintText: ="Search"
+                Width: =299
+                Y: =56
+                ZIndex: =3
+
+        "'COS-OC-CON-FilterOption' As groupContainer.manualLayoutContainer":
+            Height: =692
+            Width: =If(FilterOption, Parent.Width - 1, 0)
+            ZIndex: =4
+
+            "'COS-OC-SHA-YellowBackground' As rectangle":
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =Parent.Height
+                Width: =Parent.Width - 1
+                X: =1
+                ZIndex: =1
+
+            "'COS-OC-LBL-Title' As label":
+                Align: =Align.Center
+                BorderThickness: =1
+                Font: =Font.Georgia
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =15
+                Text: ="Filter Option"
+                Width: =299
+                ZIndex: =2
+
+            "'COS-OC-FO-CON-Criteria3' As groupContainer.manualLayoutContainer":
+                Height: =190
+                Visible: =If(NumberOfSelectedFilterCriteria = 3, true, false)
+                Width: =299
+                Y: =436
+                ZIndex: =3
+
+                "'COS-OC-FO-C3-LBL-ColumnChoiceText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Column Choice :"
+                    Width: =256
+                    X: =21
+                    Y: =30
+                    ZIndex: =1
+
+                "'COS-OC-FO-C3-LBL-TitleC3' As label":
+                    Font: =Font.Georgia
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: |-
+                        ="Filter Criteria III : "
+                    Width: =256
+                    ZIndex: =2
+
+                "'COS-OC-FO-C3-DD-ColumnChoiceC3' As dropdown":
+                    Height: =35
+                    Items: =["ControlID", "Control Name", "Control Description"]
+                    Width: =259
+                    X: =21
+                    Y: =60
+                    ZIndex: =3
+
+                "'COS-OC-FO-C3-LBL-SearchInputText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Search Bar :"
+                    Width: =256
+                    X: =21
+                    Y: =105
+                    ZIndex: =4
+
+                "'COS-OC-FO-C3-INP-InputC3' As text":
+                    Default: =""
+                    Font: =Font.Georgia
+                    Height: =39
+                    HintText: ="Search"
+                    Width: =259
+                    X: =21
+                    Y: =135
+                    ZIndex: =5
+
+                "'COS-OC-FO-C3-ICO-DeleteC3' As icon.Cancel":
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =50
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =If(NumberOfSelectedFilterCriteria = 3, UpdateContext({NumberOfSelectedFilterCriteria: 2}))
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Visible: =If('COS-OC-FO-CON-Criteria3'.Visible, true, false)
+                    Width: =50
+                    X: =250
+                    ZIndex: =6
+
+            "'COS-OC-FO-CON-Criteria2' As groupContainer.manualLayoutContainer":
+                Height: =190
+                Visible: =If(NumberOfSelectedFilterCriteria >= 2, true, false)
+                Width: =299
+                Y: =246
+                ZIndex: =4
+
+                "'COS-OC-FO-C2-LBL-ColumnChoiceText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Column Choice :"
+                    Width: =256
+                    X: =21
+                    Y: =30
+                    ZIndex: =1
+
+                "'COS-OC-FO-C2-LBL-TitleC2' As label":
+                    Font: =Font.Georgia
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: |-
+                        ="Filter Criteria II : "
+                    Width: =256
+                    ZIndex: =2
+
+                "'COS-OC-FO-C2-DD-ColumnChoiceC2' As dropdown":
+                    Height: =35
+                    Items: =["ControlID", "Control Name", "Control Description"]
+                    Width: =259
+                    X: =21
+                    Y: =60
+                    ZIndex: =3
+
+                "'COS-OC-FO-C2-LBL-SearchInputText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Search Bar :"
+                    Width: =256
+                    X: =21
+                    Y: =105
+                    ZIndex: =4
+
+                "'COS-OC-FO-C2-INP-InputC2' As text":
+                    Default: =""
+                    Font: =Font.Georgia
+                    Height: =39
+                    HintText: ="Search"
+                    Width: =259
+                    X: =21
+                    Y: =135
+                    ZIndex: =5
+
+                "'COS-OC-FO-C2-ICO-DeleteC2' As icon.Cancel":
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =50
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =If(NumberOfSelectedFilterCriteria = 2, UpdateContext({NumberOfSelectedFilterCriteria: 1}))
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Visible: =If('COS-OC-FO-C3-ICO-DeleteC3'.Visible, false, true)
+                    Width: =50
+                    X: =250
+                    ZIndex: =6
+
+            "'COS-OC-FO-CON-Criteria1' As groupContainer.manualLayoutContainer":
+                Height: =190
+                Width: =299
+                Y: =56
+                ZIndex: =5
+
+                "'COS-OC-FO-C1-LBL-ColumnChoiceText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Column Choice :"
+                    Width: =256
+                    X: =21
+                    Y: =30
+                    ZIndex: =1
+
+                "'COS-OC-FO-C1-LBL-TitleC1' As label":
+                    Font: =Font.Georgia
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: |-
+                        ="Filter Criteria I : "
+                    Width: =256
+                    ZIndex: =2
+
+                "'COS-OC-FO-C1-DD-ColumnChoiceC1' As dropdown":
+                    Height: =35
+                    Items: =["ControlID", "Control Name", "Control Description"]
+                    Width: =259
+                    X: =21
+                    Y: =60
+                    ZIndex: =3
+
+                "'COS-OC-FO-C1-LBL-SearchInputText' As label":
+                    Font: =Font.Georgia
+                    Height: =30
+                    Text: |-
+                        ="Search Bar :"
+                    Width: =256
+                    X: =21
+                    Y: =105
+                    ZIndex: =4
+
+                "'COS-OC-FO-C1-INP-InputC1' As text":
+                    Default: =""
+                    Height: =39
+                    HintText: ="Search"
+                    Width: =259
+                    X: =21
+                    Y: =135
+                    ZIndex: =5
+
+        "'COS-OC-CON-AddControl' As groupContainer.manualLayoutContainer":
+            Height: =692
+            Width: =If(AddControl, Parent.Width - 1, 0)
+            ZIndex: =5
+
+            "'COS-OC-AC-SHA-YellowBackground' As rectangle":
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 230, 0, 1)
+                Height: =Parent.Height
+                Width: =Parent.Width - 1
+                ZIndex: =1
+
+            "'COS-OC-AC-LBL-Title' As label":
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Font: =Font.Georgia
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =15
+                Text: ="Create New Control Form"
+                Width: =Parent.Width - 1
+                ZIndex: =2
+
+            "'COS-OC-AC-FOR-AddingControlForm' As form":
+                DataSource: =ControlDatabaseFD
+                DefaultMode: =FormMode.New
+                Height: =636
+                NumberOfColumns: =1
+                Width: =Parent.Width - 3
+                Y: =56
+                ZIndex: =3
+
+    "'COS-CON-MoreInformationRequested' As groupContainer.manualLayoutContainer":
+        Height: =If(MoreInformationRequested, 309, 0)
+        Width: =1278
+        X: =88
+        Y: =459
+        ZIndex: =12
+
+        "'COS-MIR-SHA-YellowBackground' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =5
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =Parent.Height
+            Width: =Parent.Width
+            ZIndex: =1
+
+        "'COS-MIR-SHA-Separator' As rectangle":
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =285
+            Width: =2
+            X: =468
+            Y: =12
+            ZIndex: =13
+
+        "'COS-MIR-LBL-ControlDescription' As label":
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            Text: |-
+                ="Control Description : " & 'COS-GAL-Gallery'.Selected.'Control Description'
+            Width: =808
+            X: =470
+            Y: =154
+            ZIndex: =18
+
+        "'COS-MIR-LBL-ControlName' As label":
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            Text: |-
+                ="Control Name : " & 'COS-GAL-Gallery'.Selected.'Control Name'
+            Width: =808
+            X: =470
+            Y: =184
+            ZIndex: =19
+
+        "'COS-MIR-LBL-ControlID' As label":
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =95
+            Text: |-
+                ="Control ID : " & 'COS-GAL-Gallery'.Selected.ControlID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =808
+            X: =470
+            Y: =214
+            ZIndex: =20
+
+    "'COS-CON-EditRecord' As groupContainer.manualLayoutContainer":
+        Height: =If(EditOption, 309, 0)
+        Visible: =EditOption
+        Width: =1278
+        X: =88
+        Y: =459
+        ZIndex: =13
+
+        "'COS-ER-FOR-EditControl' As form":
+            DataSource: =ControlDatabaseFD
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =309
+            Item: ='COS-GAL-Gallery'.Selected
+            Width: =1278
+            ZIndex: =2
+
+            "'COS-ER-EC-DC-ControlDescription' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Control Description"
+                Default: =ThisItem.'Control Description'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@ControlDatabaseFD],DataSourceInfo.DisplayName,"Control Description")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "Control Description")
+                Required: =false
+                Update: =DataCardValue10.Text
+                Width: =800
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey10 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue10 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage11 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue10.Y + DataCardValue10.Height
+                    ZIndex: =3
+
+                StarVisible11 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey10.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey10.Y
+                    ZIndex: =4
+
+            "'COS-ER-EC-DC-ControlName' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Control Name"
+                Default: =ThisItem.'Control Name'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@ControlDatabaseFD],DataSourceInfo.DisplayName,"Control Name")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "Control Name")
+                Required: =false
+                Update: =DataCardValue12.Text
+                Width: =800
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey12 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue12 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage15 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue12.Y + DataCardValue12.Height
+                    ZIndex: =3
+
+                StarVisible15 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey12.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey12.Y
+                    ZIndex: =4
+
+            "'COS-ER-EC-DC-ControlID' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="ControlID"
+                Default: =ThisItem.ControlID
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@ControlDatabaseFD],DataSourceInfo.DisplayName,"ControlID")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =true
+                Width: =800
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey18 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue23 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey18.Y + DataCardKey18.Height + 5
+                    ZIndex: =2
+

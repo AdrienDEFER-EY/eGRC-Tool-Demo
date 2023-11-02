@@ -1,0 +1,15 @@
+ROHamburgerMenu As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    ROHMWidth: =If(ROOpenMenu, Max(App.Width, App.DesignWidth)/5, 64)
+    Width: =
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Icon1 As icon.Hamburger:
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(ROOpenMenu, !ROOpenMenu)
+        X: =12
+        ZIndex: =1
+

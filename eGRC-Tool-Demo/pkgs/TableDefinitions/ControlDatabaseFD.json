@@ -1,0 +1,7 @@
+{
+  "DataEntityMetadataJson": {
+    "{F55B6E59-47F7-4DE8-B368-DDFCEFCB862D}": "{\"name\":\"{F55B6E59-47F7-4DE8-B368-DDFCEFCB862D}\",\"title\":\"ControlDatabaseFD\",\"x-ms-permission\":\"read-write\",\"x-ms-capabilities\":{\"sortRestrictions\":{\"sortable\":true},\"filterRestrictions\":{\"filterable\":true},\"filterFunctionSupport\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"schema\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"ControlID\":{\"type\":\"string\",\"title\":\"ControlID\",\"x-ms-sort\":\"none\",\"x-ms-capabilities\":{\"filterFunctions\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"x-ms-permission\":\"read-write\"},\"Control Name\":{\"type\":\"string\",\"title\":\"Control Name\",\"x-ms-sort\":\"none\",\"x-ms-capabilities\":{\"filterFunctions\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"x-ms-permission\":\"read-write\"},\"Control Description\":{\"type\":\"string\",\"title\":\"Control Description\",\"x-ms-sort\":\"none\",\"x-ms-capabilities\":{\"filterFunctions\":[\"eq\",\"ne\",\"substringof\",\"contains\",\"startswith\",\"endswith\"]},\"x-ms-permission\":\"read-write\"}}}}}"
+  },
+  "EntityName": "ControlDatabaseFD",
+  "TableName": "{F55B6E59-47F7-4DE8-B368-DDFCEFCB862D}"
+}

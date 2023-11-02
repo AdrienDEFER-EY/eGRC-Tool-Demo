@@ -1,0 +1,92 @@
+{
+  "219d5415-7952-4cbc-a95a-c67a0781ea73": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "66a8668f-9e47-43d9-b6d6-820236c6ee96": {
+          "value": "shared_office365"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a721ae88-7575-4aac-ad38-01653d089b39"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "66a8668f-9e47-43d9-b6d6-820236c6ee96"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a721ae88-7575-4aac-ad38-01653d089b39"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "eGRCToolBusinessProcess"
+    ],
+    "dependencies": {
+      "shared_office365": "66a8668f-9e47-43d9-b6d6-820236c6ee96"
+    },
+    "dependents": [],
+    "id": "219d5415-7952-4cbc-a95a-c67a0781ea73"
+  },
+  "66a8668f-9e47-43d9-b6d6-820236c6ee96": {
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1659/1.0.1659.3460/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "219d5415-7952-4cbc-a95a-c67a0781ea73"
+    ],
+    "id": "66a8668f-9e47-43d9-b6d6-820236c6ee96"
+  },
+  "9c3e1b67-f160-44a5-bd30-b95473dd6dd1": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1658/1.0.1658.3452/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "groups%252F6f9fb1eb-cf47-4470-855e-1f879ef2da6d,b%2521SB3J51AQIkKygVmxTMv3P1nZKZhJIhZOoZutaQesbofCH3fw1JOLRKQrEmLn7qmy,01V6XVCTIGA6M3GQ3GM5D3UAYM36FV7XHK": {
+        "dataSources": {
+          "RiskTaxonomy": {
+            "tableName": "{F719E79D-2823-4567-A65F-99FA61506FC4}"
+          }
+        }
+      },
+      "groups%252F6f9fb1eb-cf47-4470-855e-1f879ef2da6d,b%2521SB3J51AQIkKygVmxTMv3P1nZKZhJIhZOoZutaQesbofCH3fw1JOLRKQrEmLn7qmy,01V6XVCTOLHSRUZPB57NB2T45X55EODQ77": {
+        "dataSources": {
+          "ControlDatabaseFD": {
+            "tableName": "{F55B6E59-47F7-4DE8-B368-DDFCEFCB862D}"
+          },
+          "RiskDatabaseFD": {
+            "tableName": "{8F511C9B-EBF5-4F35-AB82-8023ED7AE523}"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "RiskDatabaseFD",
+      "ControlDatabaseFD",
+      "RiskTaxonomy"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "9c3e1b67-f160-44a5-bd30-b95473dd6dd1"
+  }
+}

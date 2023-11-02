@@ -1,0 +1,202 @@
+"'Risk Taxonomy Screen' As screen":
+    OnVisible: |
+        =ClearCollect(
+           EmailAddressCollection,
+           "Adrien.Defer@be.ey.com",
+           "Marie.Levrau@be.ey.com",
+           "Sander.Sienaert@be.ey.com"
+        );
+        UpdateContext({RiskState: "BO"});
+        UpdateContext({BusinessOwner: ""});
+        UpdateContext({SPOC: ""});
+        UpdateContext({RiskOwner: ""});
+
+    Dropdown9 As dropdown:
+        Height: =41
+        Items: =Distinct(RiskTaxonomy, TaxonomyLevel0)
+        X: =128
+        Y: =188
+        ZIndex: =1
+
+    Label2 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: ="Level 0 risks"
+        X: =128
+        Y: =148
+        ZIndex: =2
+
+    Label2_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: ="Level 2 risks"
+        X: =984
+        Y: =148
+        ZIndex: =3
+
+    Label2_2 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: ="Level 1 risks"
+        X: =556
+        Y: =148
+        ZIndex: =4
+
+    Dropdown9_1 As dropdown:
+        Height: =41
+        Items: |-
+            =Distinct(Filter(
+                RiskTaxonomy,
+               TaxonomyLevel0 = Text(Dropdown9.Selected.Value)
+            ), TaxonomyLevel1)
+        X: =556
+        Y: =188
+        ZIndex: =5
+
+    Dropdown9_2 As dropdown:
+        Height: =41
+        Items: |-
+            =Distinct(Filter(
+                RiskTaxonomy,
+                TaxonomyLevel0 = Text(Dropdown9.Selected.Value) And
+                TaxonomyLevel1 = Text(Dropdown9_1.Selected.Value)
+            ), TaxonomyLevel2)
+        X: =984
+        Y: =188
+        ZIndex: =6
+
+    Label3 As label:
+        Height: =52
+        Size: =20
+        Text: |-
+            ="RISK STATE : " & RiskState
+        Width: =333
+        X: =123
+        Y: =275
+        ZIndex: =8
+
+    Label2_3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: ="Business Owner"
+        X: =123
+        Y: =335
+        ZIndex: =12
+
+    Label2_4 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: ="Single Point of Contact"
+        Width: =226
+        X: =556
+        Y: =335
+        ZIndex: =13
+
+    Label2_5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: ="Risk Owner"
+        X: =984
+        Y: =335
+        ZIndex: =14
+
+    Button1 As button:
+        Height: =76
+        OnSelect: |-
+            =UpdateContext({RiskState: "SPOC"});
+            eGRCToolBusinessProcess.Run(
+                'SPOC-InputEmail'.Selected.Value,
+                "Passing a risk from BO to SPOC",
+                'BO-InputEmail'.Selected.Value & " has passed you a risk, you become the SPOC for that risk",
+                'BO-InputEmail'.Selected.Value,
+                "Confirmation : Risk passed to a SPOC",
+                "You have successfuly passed a risk to the SPOC with email address : " & 'SPOC-InputEmail'.Selected.Value
+            )
+        Text: ="Send to the SPOC"
+        Width: =341
+        X: =128
+        Y: =481
+        ZIndex: =15
+
+    Button1_1 As button:
+        Height: =76
+        OnSelect: |-
+            =UpdateContext({RiskState: "RO"});
+            eGRCToolBusinessProcess.Run(
+                'RO-InputEmail'.Selected.Value,
+                "Passing a risk from SPOC to RO",
+                'SPOC-InputEmail'.Selected.Value & " has passed you a risk, you become the risk owner for that risk",
+                'SPOC-InputEmail'.Selected.Value,
+                "Confirmation : Risk passed to a RO",
+                "You have successfuly passed a risk to the RO with email address : " & 'RO-InputEmail'.Selected.Value
+            )
+        Text: ="Send to the Risk Owner"
+        Width: =343
+        X: =556
+        Y: =481
+        ZIndex: =16
+
+    Button1_2 As button:
+        Height: =76
+        OnSelect: |-
+            =UpdateContext({RiskState: "BO"});
+            eGRCToolBusinessProcess.Run(
+                'BO-InputEmail'.Selected.Value,
+                "Passing a risk back from SPOC to BO",
+                'SPOC-InputEmail'.Selected.Value & " has passed you a risk back, you become the business owner for that risk",
+                'SPOC-InputEmail'.Selected.Value,
+                "Confirmation : Risk passed back to a BO",
+                "You have successfuly passed a risk back to the BO with email address : " & 'BO-InputEmail'.Selected.Value
+            )
+        Text: ="Send back to the Business Owner"
+        Width: =343
+        X: =556
+        Y: =581
+        ZIndex: =17
+
+    Label2_6 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: |-
+            ="Business Owner actions :"
+        Width: =230
+        X: =128
+        Y: =440
+        ZIndex: =18
+
+    Label2_7 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Text: |-
+            ="SPOC actions :"
+        Width: =230
+        X: =556
+        Y: =440
+        ZIndex: =19
+
+    Label4 As label:
+        Height: =46
+        Text: =User().Email
+        Width: =220
+        X: =43
+        Y: =56
+        ZIndex: =21
+
+    "'BO-InputEmail' As dropdown":
+        Items: =EmailAddressCollection
+        X: =123
+        Y: =376
+        ZIndex: =22
+
+    "'SPOC-InputEmail' As dropdown":
+        Items: =EmailAddressCollection
+        X: =562
+        Y: =376
+        ZIndex: =23
+
+    "'RO-InputEmail' As dropdown":
+        Items: =EmailAddressCollection
+        X: =984
+        Y: =376
+        ZIndex: =24
+
