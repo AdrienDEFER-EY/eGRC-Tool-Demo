@@ -1,4 +1,5 @@
 "'Edit Risk Screen' As screen":
+    OnVisible: =Set(EditRiskItem, 'ROS-GAL-Gallery'.Selected)
 
     Label5_1 As label:
         Text: ="Create new risk"
@@ -651,16 +652,10 @@
             Color: =RGBA(166, 166, 166, 1)
             Height: =50
             Icon: =Icon.ChevronRight
-            OnSelect: |-
-                =//UpdateContext({NavigateControlRecord1: ThisItem});
-                Set(NavigateControlRecord1, ThisItem);
-                //Navigate(MoreInfoRecord)
+            OnSelect: |
+                =Set(NavigateControlRecord1, ThisItem);
                 Set(BackArrowEditRisk, true);
                 Navigate('Information Specific Record Screen')
-                
-                //Set(NavigateControlRecord, ThisItem);
-                
-                //Navigate('Control Overview Screen', {Nav: NavigateControlRecord1})
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -684,4 +679,26 @@
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =6
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Height: =76
+        Width: =292
+        X: =1074
+        Y: =692
+        ZIndex: =12
+
+        Icon6 As icon.Save:
+            Height: =52
+            Icon: =Icon.Save
+            Width: =54
+            X: =196
+            Y: =15
+            ZIndex: =1
+
+        Label12 As label:
+            Size: =16
+            Text: ="Save changes"
+            X: =9
+            Y: =15
+            ZIndex: =2
 

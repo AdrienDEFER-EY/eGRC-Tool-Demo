@@ -1055,7 +1055,7 @@
         "'ROS-HM-SB-LBL-SearchButtonLabel_5' As label":
             Height: =76
             Size: =18
-            Text: ="Save without control"
+            Text: ="Save without controls"
             Width: =360
             ZIndex: =3
 

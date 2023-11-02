@@ -235,7 +235,7 @@
 
     Icon3 As icon.ArrowLeft:
         Icon: =Icon.ArrowLeft
-        OnSelect: =If(BackArrowEditRisk, Navigate('Edit Risk Screen'),Navigate('Add Controls To New Risk Screen'))
+        OnSelect: =If(BackArrowEditRisk, Navigate('Edit Risk Screen'), BackArrowEditControl, Navigate('Edit Controls of Risk Screen'), Navigate('Add Controls To New Risk Screen'))
         X: =36
         Y: =12
         ZIndex: =5

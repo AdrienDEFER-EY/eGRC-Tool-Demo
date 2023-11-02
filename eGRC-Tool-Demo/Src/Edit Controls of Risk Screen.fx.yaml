@@ -1,4 +1,7 @@
 "'Edit Controls of Risk Screen' As screen":
+    OnVisible: |-
+        =ClearCollect(SelectedControlsToUnlink, {});
+        ClearCollect(LocalRelationDB, RelationRC_DB)
 
     Label5_2 As label:
         Text: ="Create new risk"
@@ -27,4 +30,191 @@
         Width: =1366
         Y: =692
         ZIndex: =7
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =295
+        Items: |-
+            =/*Filter(
+                ControlDatabaseFD,
+                ControlID in Filter(
+                    RelationRC_DB,
+                    RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
+                ).ControlID
+            )*/
+            
+            With({linkedControls: Filter(
+                    LocalRelationDB,
+                    RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
+                ).ControlID}, Filter(
+                ControlDatabaseFD, ControlID in linkedControls))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        X: =45
+        Y: =159
+        ZIndex: =8
+
+        Title2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.ControlID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Control Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title2.Width
+            X: =Title2.X
+            Y: =Title2.Y + Title2.Height
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Set(NavigateControlRecord1, ThisItem);
+                Set(BackArrowEditControl, true);
+                Set(BackArrowEditRisk, false);
+                Navigate('Information Specific Record Screen')
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator2 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator2.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Checkbox1 As checkbox:
+            Height: =48
+            OnCheck: =If(ThisItem.IsSelected, Collect(SelectedControlsToUnlink, ThisItem), Remove(SelectedControlsToUnlink, ThisItem))
+            OnSelect: =Select(Parent)
+            Text: =
+            Width: =48
+            X: =28
+            Y: =29
+            ZIndex: =7
+
+    Label10 As label:
+        Height: =28
+        Size: =16
+        Text: |-
+            ="Current controls:"
+        Width: =208
+        X: =45
+        Y: =99
+        ZIndex: =9
+
+    Button2 As button:
+        OnSelect: |-
+            =IfError(RemoveIf(RelationRC_DB, RiskID = EditRiskItem.RiskID && ControlID in Concat(SelectedControlsToUnlink, ControlID, ";")), "ok");
+            ClearCollect(LocalRelationDB, RelationRC_DB); 
+            
+            ClearCollect(SelectedControlsToUnlink, {});
+            /*Refresh(RelationRC_DB); Reset(ComboBox1); Notify("The controls are successfully unlinked")*/
+            
+            
+            //gallery wil niet updaten
+            //combobox wil niet updaten 
+        Text: ="Unlink control(s)"
+        Width: =208
+        X: =45
+        Y: =586
+        ZIndex: =10
+
+    ComboBox1 As combobox:
+        DisplayFields: =["ControlID", "Control Name"]
+        InputTextPlaceholder: ="Find control"
+        IsSearchable: =false
+        Items: |-
+            =//With({allLinkedControls: Filter(RelationRC_DB, RiskID = 'ROS-GAL-Gallery'.Selected.RiskID).ControlID}, Filter(ControlDatabaseFD as cDB, Not(cDB.'ControlID' in allLinkedControls)))
+            //With({allLinkedControls: Filter(RelationRC_DB, RiskID = 'ROS-GAL-Gallery'.Selected.RiskID).ControlID}, allLinkedControls)
+            With(
+                {
+                    allLinkedControls: Filter(
+                        LocalRelationDB,
+                        RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
+                    ).ControlID
+                },
+                Filter(
+                    ControlDatabaseFD,
+                    Not(ControlID in allLinkedControls)
+                )
+            )
+        Reset: =true
+        SearchFields: =["Control Name"]
+        SearchItems: =[]
+        Template: =ListItemTemplate.Person
+        X: =900
+        Y: =177
+        ZIndex: =11
+
+    Label10_1 As label:
+        Height: =28
+        Size: =16
+        Text: |-
+            ="Add controls:"
+        Width: =208
+        X: =900
+        Y: =99
+        ZIndex: =12
+
+    Button3 As button:
+        Height: =42
+        OnSelect: |
+            =ForAll(ComboBox1.SelectedItems As CurrentItem, Patch(RelationRC_DB, {RiskID: 'ROS-GAL-Gallery'.Selected.RiskID, ControlID: CurrentItem.ControlID})); 
+            //Collect(LocalRelationDB,{'RiskID': 'ROS-GAL-Gallery'.Selected.RiskID, ControlID: CurrentItem.ControlID}));
+            ClearCollect(LocalRelationDB, RelationRC_DB);
+            Reset(ComboBox1)
+            //Refresh(RelationRC_DB);
+            //Refresh(ControlDatabaseFD)
+        Text: |-
+            ="Add Control(s)
+            "
+        Width: =208
+        X: =900
+        Y: =286
+        ZIndex: =13
+
+    Icon5 As icon.ArrowRight:
+        Icon: =Icon.ArrowRight
+        OnSelect: =Navigate('Edit Risk Screen')
+        X: =1264
+        Y: =698
+        ZIndex: =14
 

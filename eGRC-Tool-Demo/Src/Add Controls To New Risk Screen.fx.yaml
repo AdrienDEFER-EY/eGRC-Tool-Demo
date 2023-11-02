@@ -58,6 +58,7 @@
             OnSelect: |-
                 =Set(NavigateControlRecord1, ThisItem);
                 Set(BackArrowEditRisk, false);
+                Set(BackArrowEditControl, false);
                 Navigate('Information Specific Record Screen')
             PaddingBottom: =16
             PaddingLeft: =16
