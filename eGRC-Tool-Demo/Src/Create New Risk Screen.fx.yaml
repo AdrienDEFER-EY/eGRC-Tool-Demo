@@ -3,10 +3,9 @@
     "'ROS-OC-AR-FOR-AddingRiskForm_1' As form":
         DataSource: =RiskDatabaseFD
         DefaultMode: =FormMode.New
-        Height: =533
-        Width: =Parent.Width - 3
-        X: =3
-        Y: =80
+        Height: =616
+        Width: =1366
+        Y: =76
         ZIndex: =1
 
         "'Department L1_DataCard1_1' As typedDataCard.textualEditCard":
@@ -20,7 +19,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Department L1")
             Required: =false
             Update: =DataCardValue4_1.Text
-            Width: =454
+            Width: =455
             X: =0
             Y: =0
             ZIndex: =1
@@ -88,7 +87,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Reason for Risk Closure")
             Required: =false
             Update: =DataCardValue5_1.Text
-            Width: =454
+            Width: =455
             X: =1
             Y: =0
             ZIndex: =1
@@ -156,7 +155,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Cause")
             Required: =false
             Update: =DataCardValue6_1.Text
-            Width: =454
+            Width: =455
             X: =2
             Y: =0
             ZIndex: =1
@@ -224,7 +223,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Confidentiality")
             Required: =false
             Update: =DataCardValue7_1.Text
-            Width: =454
+            Width: =455
             X: =0
             Y: =1
             ZIndex: =1
@@ -292,7 +291,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Description")
             Required: =false
             Update: =DataCardValue8_1.Text
-            Width: =454
+            Width: =455
             X: =1
             Y: =1
             ZIndex: =1
@@ -360,7 +359,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Group")
             Required: =false
             Update: =DataCardValue9_1.Text
-            Width: =454
+            Width: =455
             X: =2
             Y: =1
             ZIndex: =1
@@ -428,7 +427,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Level of Concern")
             Required: =false
             Update: =DataCardValue11_1.Text
-            Width: =454
+            Width: =455
             X: =0
             Y: =2
             ZIndex: =1
@@ -496,7 +495,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Likelihood")
             Required: =false
             Update: =DataCardValue13_1.Text
-            Width: =454
+            Width: =455
             X: =1
             Y: =2
             ZIndex: =1
@@ -564,7 +563,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Name")
             Required: =false
             Update: =DataCardValue14_1.Text
-            Width: =454
+            Width: =455
             X: =2
             Y: =2
             ZIndex: =1
@@ -632,7 +631,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Owner")
             Required: =false
             Update: =DataCardValue15_1.Text
-            Width: =454
+            Width: =455
             X: =0
             Y: =3
             ZIndex: =1
@@ -700,7 +699,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Severity")
             Required: =false
             Update: =DataCardValue16_1.Text
-            Width: =454
+            Width: =455
             X: =1
             Y: =3
             ZIndex: =1
@@ -768,7 +767,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Status")
             Required: =false
             Update: =DataCardValue17_1.Text
-            Width: =454
+            Width: =455
             X: =2
             Y: =3
             ZIndex: =1
@@ -836,7 +835,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Type Level I")
             Required: =false
             Update: =DataCardValue18_1.Text
-            Width: =454
+            Width: =455
             X: =0
             Y: =4
             ZIndex: =1
@@ -904,7 +903,7 @@
             MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Risk Type Level II")
             Required: =false
             Update: =DataCardValue19_1.Text
-            Width: =454
+            Width: =455
             X: =1
             Y: =4
             ZIndex: =1
@@ -967,21 +966,117 @@
         Y: =40
         ZIndex: =2
 
-    Icon2 As icon.ArrowRight:
-        Icon: =Icon.ArrowRight
-        OnSelect: |-
-            =UpdateContext({GeneratedID: Text(RoundUp(Rand() * 100000, 0), "00000")});
-            Set(NewRiskID, "ID" & GeneratedID);
-            Patch(
-                RiskDatabaseFD,
-                Defaults(RiskDatabaseFD),  // Retain existing values in the record
-                {
-                    RiskID: "ID" & GeneratedID,
-                    'Risk Name': DataCardValue14_1.Text
-                }
-            );
-            Navigate('Add Controls To New Risk Screen')
-        X: =1280
+    Rectangle1_2 As rectangle:
+        Fill: =RGBA(255, 230, 0, 1)
+        Height: =76
+        Width: =1366
+        ZIndex: =4
+
+    Label8 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =76
+        Size: =30
+        Text: ="CREATE A NEW RISK"
+        Width: =1366
+        ZIndex: =5
+
+    Rectangle1_3 As rectangle:
+        Fill: =RGBA(255, 230, 0, 1)
+        Height: =76
+        Width: =1366
         Y: =692
-        ZIndex: =3
+        ZIndex: =7
+
+    "'ROS-HM-CON-SearchButton_4' As groupContainer.manualLayoutContainer":
+        Height: =76
+        Width: =597
+        X: =766
+        Y: =692
+        ZIndex: =9
+
+        "'ROS-HM-SB-ICO-SearchButtonIcon_4' As icon.Search":
+            Height: =76
+            Icon: =Icon.Search
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =76
+            X: =510
+            ZIndex: =1
+
+        "'ROS-HM-SB-LBL-SearchButtonLabel_4' As label":
+            Height: =76
+            Size: =18
+            Text: ="Continue with control selection"
+            Width: =360
+            X: =150
+            ZIndex: =2
+
+        "'ROS-HM-SB-BTN-SearchButton_4' As button":
+            Fill: =RGBA(255, 255, 255, 0)
+            Height: =76
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({GeneratedID: Text(RoundUp(Rand() * 100000, 0), "00000")});
+                Set(NewRiskID, "ID" & GeneratedID);
+                Patch(
+                    RiskDatabaseFD,
+                    Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                    {
+                        RiskID: "ID" & GeneratedID,
+                        'Risk Name': DataCardValue14_1.Text
+                    }
+                );
+                SubmitForm('ROS-OC-AR-FOR-AddingRiskForm_1');
+                Navigate('Add Controls To New Risk Screen')
+            Text: =
+            Width: =437
+            X: =149
+            ZIndex: =3
+
+    "'ROS-HM-CON-SearchButton_5' As groupContainer.manualLayoutContainer":
+        Height: =76
+        Width: =473
+        Y: =692
+        ZIndex: =10
+
+        "'ROS-HM-SB-ICO-SearchButtonIcon_5' As icon.Save":
+            Height: =76
+            Icon: =Icon.Save
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =76
+            X: =256
+            ZIndex: =1
+
+        "'ROS-HM-SB-LBL-SearchButtonLabel_5' As label":
+            Height: =76
+            Size: =18
+            Text: ="Save without control"
+            Width: =360
+            ZIndex: =3
+
+        "'ROS-HM-SB-BTN-SearchButton_5' As button":
+            Fill: =RGBA(255, 255, 255, 0)
+            Height: =76
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({GeneratedID: Text(RoundUp(Rand() * 100000, 0), "00000")});
+                Set(NewRiskID, "ID" & GeneratedID);
+                Patch(
+                    RiskDatabaseFD,
+                    Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                    {
+                        RiskID: "ID" & GeneratedID,
+                        'Risk Name': DataCardValue14_1.Text
+                    }
+                );
+                Navigate('Risk Overview Screen')
+            Text: =
+            Width: =473
+            ZIndex: =4
 

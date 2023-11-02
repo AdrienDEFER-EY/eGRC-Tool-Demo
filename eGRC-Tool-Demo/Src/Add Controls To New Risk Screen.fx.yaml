@@ -57,7 +57,7 @@
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Set(NavigateControlRecord1, ThisItem);
-                Navigate(MoreInfoRecord)
+                //Navigate(MoreInfoRecord)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -107,18 +107,23 @@
         ZIndex: =3
 
     Icon3 As icon.Save:
+        Height: =76
         Icon: =Icon.Save
         OnSelect: |-
-            =
-            //add all controls to this risk 
+            =//add all controls to this risk 
             ClearCollect(SelectedControlsToLink3, Filter(Gallery4.AllItems, Checkbox2.Value = true).ControlID);
             ForAll(SelectedControlsToLink3, Patch(RelationRC_DB, Defaults(RelationRC_DB), {RiskID: NewRiskID, ControlID: ControlID}));
             //uncheck all controls
             UpdateContext({ResetCheckbox:true});
             UpdateContext({ResetCheckbox:false});
             Navigate('Risk Overview Screen')
-        X: =1245
-        Y: =698
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Width: =76
+        X: =1008
+        Y: =504
         ZIndex: =4
 
     Label6 As label:
@@ -129,4 +134,57 @@
         Text: ="LINK CONTROL(S) TO THE NEW RISK"
         Width: =1366
         ZIndex: =5
+
+    Label7 As label:
+        Font: =Font.Georgia
+        Height: =70
+        Size: =20
+        Text: |
+            ="Control selected : " & CountIf(Gallery4.AllItems, Checkbox2.Value = true)
+        Width: =276
+        Y: =692
+        ZIndex: =6
+
+    "'ROS-HM-CON-SearchButton_3' As groupContainer.manualLayoutContainer":
+        Height: =76
+        Width: =477
+        X: =889
+        Y: =692
+        ZIndex: =8
+
+        "'ROS-HM-SB-ICO-SearchButtonIcon_3' As icon.Search":
+            Height: =76
+            Icon: =Icon.Search
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =76
+            X: =401
+            ZIndex: =1
+
+        "'ROS-HM-SB-LBL-SearchButtonLabel_3' As label":
+            Height: =76
+            Size: =18
+            Text: ="Save"
+            Width: =105
+            X: =260
+            ZIndex: =2
+
+        "'ROS-HM-SB-BTN-SearchButton_3' As button":
+            Fill: =RGBA(255, 255, 255, 0)
+            Height: =76
+            HoverFill: =
+            OnSelect: |-
+                =//add all controls to this risk 
+                ClearCollect(SelectedControlsToLink3, Filter(Gallery4.AllItems, Checkbox2.Value = true).ControlID);
+                ForAll(SelectedControlsToLink3, Patch(RelationRC_DB, Defaults(RelationRC_DB), {RiskID: NewRiskID, ControlID: ControlID}));
+                //uncheck all controls
+                UpdateContext({ResetCheckbox:true});
+                UpdateContext({ResetCheckbox:false});
+                Navigate('Risk Overview Screen')
+            Text: =
+            Width: =141
+            X: =260
+            ZIndex: =3
 

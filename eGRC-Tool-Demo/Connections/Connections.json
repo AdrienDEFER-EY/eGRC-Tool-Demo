@@ -74,6 +74,9 @@
           "ControlDatabaseFD": {
             "tableName": "{F55B6E59-47F7-4DE8-B368-DDFCEFCB862D}"
           },
+          "RelationRC_DB": {
+            "tableName": "{74D6C21F-BFAF-4DCF-BDAC-F86FACB050FF}"
+          },
           "RiskDatabaseFD": {
             "tableName": "{8F511C9B-EBF5-4F35-AB82-8023ED7AE523}"
           }
@@ -83,7 +86,8 @@
     "dataSources": [
       "RiskDatabaseFD",
       "ControlDatabaseFD",
-      "RiskTaxonomy"
+      "RiskTaxonomy",
+      "RelationRC_DB"
     ],
     "dependencies": {},
     "dependents": [],
