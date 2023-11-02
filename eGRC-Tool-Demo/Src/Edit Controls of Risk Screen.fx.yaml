@@ -1,0 +1,30 @@
+"'Edit Controls of Risk Screen' As screen":
+
+    Label5_2 As label:
+        Text: ="Create new risk"
+        X: =721
+        Y: =40
+        ZIndex: =2
+
+    Rectangle1_8 As rectangle:
+        Fill: =RGBA(255, 230, 0, 1)
+        Height: =76
+        Width: =1366
+        ZIndex: =4
+
+    Label8_2 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =76
+        Size: =30
+        Text: ="Edit Controls Of Selected Risk"
+        Width: =1366
+        ZIndex: =5
+
+    Rectangle1_9 As rectangle:
+        Fill: =RGBA(255, 230, 0, 1)
+        Height: =76
+        Width: =1366
+        Y: =692
+        ZIndex: =7
+

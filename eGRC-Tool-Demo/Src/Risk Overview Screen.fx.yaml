@@ -897,14 +897,15 @@
             Height: =36
             Icon: =Icon.Edit
             OnSelect: |-
-                =UpdateContext({MoreInformationRequested: false});
+                =/*UpdateContext({MoreInformationRequested: false});
                 UpdateContext({EditOption: true});
                 UpdateContext({OpenMenu: false});
                 UpdateContext({AddRisk: false});
                 UpdateContext({FilterOption: false});
                 UpdateContext({SortOption: false});
                 UpdateContext({SearchOption: false});
-                UpdateContext({DeleteOption: false})
+                UpdateContext({DeleteOption: false})*/
+                Navigate('Edit Risk Screen')
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

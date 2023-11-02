@@ -3,8 +3,8 @@
     Form1 As form:
         DataSource: =ControlDatabaseFD
         Item: =NavigateControlRecord1
-        X: =40
-        Y: =40
+        X: =36
+        Y: =114
         ZIndex: =1
 
         "'Control Description_DataCard1' As typedDataCard.textualEditCard":
@@ -210,4 +210,33 @@
                 Wrap: =false
                 Y: =DataCardKey3_1.Y
                 ZIndex: =4
+
+    Rectangle1_5 As rectangle:
+        Fill: =RGBA(255, 230, 0, 1)
+        Height: =76
+        Width: =1366
+        ZIndex: =2
+
+    Label6_1 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =76
+        Size: =30
+        Text: ="Details about selected control"
+        Width: =1366
+        ZIndex: =3
+
+    Rectangle1_10 As rectangle:
+        Fill: =RGBA(255, 230, 0, 1)
+        Height: =76
+        Width: =1366
+        Y: =692
+        ZIndex: =4
+
+    Icon3 As icon.ArrowLeft:
+        Icon: =Icon.ArrowLeft
+        OnSelect: =If(BackArrowEditRisk, Navigate('Edit Risk Screen'),Navigate('Add Controls To New Risk Screen'))
+        X: =36
+        Y: =12
+        ZIndex: =5
 

@@ -57,7 +57,8 @@
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Set(NavigateControlRecord1, ThisItem);
-                //Navigate(MoreInfoRecord)
+                Set(BackArrowEditRisk, false);
+                Navigate('Information Specific Record Screen')
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -106,26 +107,6 @@
         Width: =1366
         ZIndex: =3
 
-    Icon3 As icon.Save:
-        Height: =76
-        Icon: =Icon.Save
-        OnSelect: |-
-            =//add all controls to this risk 
-            ClearCollect(SelectedControlsToLink3, Filter(Gallery4.AllItems, Checkbox2.Value = true).ControlID);
-            ForAll(SelectedControlsToLink3, Patch(RelationRC_DB, Defaults(RelationRC_DB), {RiskID: NewRiskID, ControlID: ControlID}));
-            //uncheck all controls
-            UpdateContext({ResetCheckbox:true});
-            UpdateContext({ResetCheckbox:false});
-            Navigate('Risk Overview Screen')
-        PaddingBottom: =10
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =10
-        Width: =76
-        X: =1008
-        Y: =504
-        ZIndex: =4
-
     Label6 As label:
         Align: =Align.Center
         Font: =Font.Georgia
@@ -140,28 +121,17 @@
         Height: =70
         Size: =20
         Text: |
-            ="Control selected : " & CountIf(Gallery4.AllItems, Checkbox2.Value = true)
+            =CountIf(Gallery4.AllItems, Checkbox2.Value = true) & " controls selected" 
         Width: =276
         Y: =692
         ZIndex: =6
 
     "'ROS-HM-CON-SearchButton_3' As groupContainer.manualLayoutContainer":
         Height: =76
-        Width: =477
-        X: =889
+        Width: =461
+        X: =905
         Y: =692
         ZIndex: =8
-
-        "'ROS-HM-SB-ICO-SearchButtonIcon_3' As icon.Search":
-            Height: =76
-            Icon: =Icon.Search
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            Width: =76
-            X: =401
-            ZIndex: =1
 
         "'ROS-HM-SB-LBL-SearchButtonLabel_3' As label":
             Height: =76
@@ -187,4 +157,10 @@
             Width: =141
             X: =260
             ZIndex: =3
+
+        Icon2 As icon.Save:
+            Icon: =Icon.Save
+            X: =380
+            Y: =6
+            ZIndex: =4
 

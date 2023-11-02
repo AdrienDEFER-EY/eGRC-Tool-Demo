@@ -97,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 122,
+    "BindingErrorCount": 118,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -110,11 +110,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "1de0a995-e7e3-4572-b8a9-94ec45af5a41",
-    "Id": "1def71e8-4d31-455b-b84f-e7e87e17fac3",
+    "Id": "f02d322c-ccb7-4e1b-a663-ac6e5383dcf9",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "eGRC Tool Final Demo",
+    "Name": "eGRC%2BTool%2BFinal%2BDemo.msapp",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
@@ -142,7 +142,10 @@
     "New Risk Screen",
     "Settings Screen",
     "Create New Risk Screen",
+    "Edit Risk Screen",
+    "Edit Controls of Risk Screen",
     "Add Controls To New Risk Screen",
-    "Information Specific Record Screen"
+    "Information Specific Record Screen",
+    "More Info Risk Screen"
   ]
 }
