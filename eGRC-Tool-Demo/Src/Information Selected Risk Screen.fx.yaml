@@ -1367,12 +1367,18 @@
         DelayItemLoading: =true
         Height: =416
         Items: |
-            =Filter(
+            =/*Filter(
                 ControlDatabaseFD,
                 ControlID in Filter(
                     RelationRC_DB,
                     RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
-                ).ControlID)
+                ).ControlID)*/
+            
+            With({linkedControls2: Filter(
+                    RelationRC_DB,
+                    RiskID = 'ROS-GAL-Gallery'.Selected.RiskID
+                ).ControlID}, Filter(
+                ControlDatabaseFD, ControlID in linkedControls2))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
