@@ -97,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 92,
+    "BindingErrorCount": 93,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -139,6 +139,8 @@
     "Language Screen",
     "Risk Taxonomy Screen",
     "New Risk Screen",
-    "Settings Screen"
+    "Settings Screen",
+    "Create New Risk Screen",
+    "Add Controls To New Risk Screen"
   ]
 }
