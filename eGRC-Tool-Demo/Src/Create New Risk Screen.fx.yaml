@@ -1029,7 +1029,6 @@
                         'Risk Name': DataCardValue14_1.Text
                     }
                 );
-                //SubmitForm('ROS-OC-AR-FOR-AddingRiskForm_1');
                 Navigate('Add Controls To New Risk Screen')
             Text: =
             Width: =437
