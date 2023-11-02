@@ -97,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 93,
+    "BindingErrorCount": 123,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -110,11 +110,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "1de0a995-e7e3-4572-b8a9-94ec45af5a41",
-    "Id": "09d33b64-8b0e-47f4-8e4b-8fdacfe9d8e7",
+    "Id": "fe13401d-be2c-4cb9-bb79-2fce48106d02",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "eGRC Tool Final Demo",
+    "Name": "eGRC%2BTool%2BFinal%2BDemo.msapp",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
@@ -133,6 +133,7 @@
   "ScreenOrder": [
     "Home Screen",
     "Risk Overview Screen",
+    "Risk Overview Screen_1",
     "Control Overview Screen",
     "Dashboard Screen",
     "Account Screen",
