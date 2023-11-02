@@ -12538,7 +12538,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17284,23 +17284,9 @@
         "BorderStyle",
         "FocusedBorderColor",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         "Width",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Height",
         "ZIndex",
         {
           "AFDDataSourceName": "",
@@ -17329,7 +17315,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "ROS-OC-AR-FOR-AddingRiskForm_1",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

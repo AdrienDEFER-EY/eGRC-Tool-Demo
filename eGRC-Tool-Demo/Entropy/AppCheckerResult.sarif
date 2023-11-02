@@ -1654,6 +1654,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Add Controls To New Risk Screen'.Gallery4.NextArrow4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Controls To New Risk Screen'.Gallery4.NextArrow4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 48,
+                  "snippet": {
+                    "text": "MoreInfoRecord"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Add Controls To New Risk Screen",
+                "type": "'Add Controls To New Risk Screen'.Gallery4.NextArrow4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "MoreInfoRecord"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Control Overview Screen'.'COS-CON-HamburgerMenu'.'COS-HM-CON-AddControlCheckButton'.'COS-HM-ACCB-BTN-AddControlCheckButton'.OnSelect"
                 }
               ],
@@ -8789,19 +8829,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Add Controls To New Risk Screen'.Gallery4.NextArrow4.TabIndex"
+                  "fullyQualifiedName": "'Create New Risk Screen'.Icon2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Add Controls To New Risk Screen'.Gallery4.NextArrow4.TabIndex",
+                  "fullyQualifiedName": "'Create New Risk Screen'.Icon2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.Icon2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.Icon2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.Icon2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Add Controls To New Risk Screen",
-                "type": "'Add Controls To New Risk Screen'.Gallery4.NextArrow4"
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.Icon2"
               }
             }
           ],
