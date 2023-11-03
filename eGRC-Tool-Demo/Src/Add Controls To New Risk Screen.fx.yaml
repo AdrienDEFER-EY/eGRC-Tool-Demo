@@ -1,6 +1,8 @@
 "'Add Controls To New Risk Screen' As screen":
     OnVisible: |-
         =UpdateContext({ROSearchOption: false});
+        // Close the hamburger menu when the page is loaded
+        UpdateContext({OpenMenu: false});
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
@@ -20,8 +22,8 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
-        Width: =966
-        X: =400
+        Width: =If(OpenMenu, 966, 1366)
+        X: ='ROS-HM-SHA-HamburgerMenuYellowBackground_2'.Width
         Y: =76
         ZIndex: =2
 
@@ -111,7 +113,7 @@
 
     "'ROS-CON-HamburgerMenu_2' As groupContainer.manualLayoutContainer":
         Height: =768
-        Width: =If(true, 400, 88)
+        Width: =If(OpenMenu, 400, 88)
         ZIndex: =3
 
         "'ROS-HM-SHA-HamburgerMenuYellowBackground_2' As rectangle":
@@ -122,8 +124,8 @@
 
         "'ROS-HM-ICO-HamburgerMenuIcon_2' As icon.Hamburger":
             Icon: =Icon.Hamburger
-            OnSelect: |
-                =
+            OnSelect: |-
+                =UpdateContext({OpenMenu: !OpenMenu})
             X: =12
             ZIndex: =2
 
@@ -279,8 +281,8 @@
 
     "'ROS-CON-ScreenHeader_2' As groupContainer.manualLayoutContainer":
         Height: =76
-        Width: =966
-        X: =400
+        Width: =1278 - 'ROS-HM-SHA-HamburgerMenuYellowBackground_2'.Width + 88
+        X: ='ROS-HM-SHA-HamburgerMenuYellowBackground_2'.Width
         ZIndex: =4
 
         "'ROS-CON-SHA-YellowRectangleHeader_2' As rectangle":
