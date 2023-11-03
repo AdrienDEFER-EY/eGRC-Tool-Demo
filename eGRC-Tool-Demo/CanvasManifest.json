@@ -97,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 25,
+    "BindingErrorCount": 35,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -110,11 +110,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "1de0a995-e7e3-4572-b8a9-94ec45af5a41",
-    "Id": "68ab8362-8e03-4fe7-95ac-0c2fb8e1336a",
+    "Id": "471e2b09-bf84-40bc-af14-0c2b95ce03f9",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "eGRC%2BTool%2BFinal%2BDemo.msapp",
+    "Name": "eGRC Tool Final Demo",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
