@@ -1,21 +1,27 @@
 "'Add Controls To New Risk Screen' As screen":
-
-    Rectangle1_1 As rectangle:
-        Fill: =RGBA(255, 230, 0, 1)
-        Height: =76
-        Width: =1366
-        Y: =692
-        ZIndex: =1
+    OnVisible: |-
+        =UpdateContext({ROSearchOption: false});
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =616
-        Items: =ControlDatabaseFD
+        Height: =692
+        Items: |-
+            =If(
+            	SearchOption,
+            	Filter(
+                    ControlDatabaseFD, 
+                    StartsWith(Text(ControlID), 'TextInput1'.Text) Or
+                    StartsWith(Text('Control Name'), 'TextInput1'.Text) And
+                    Len('TextInput1'.Text) = 0
+                ),
+                ControlDatabaseFD
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
-        Width: =1366
+        Width: =966
+        X: =400
         Y: =76
         ZIndex: =2
 
@@ -103,66 +109,192 @@
             Y: =23
             ZIndex: =7
 
-    Rectangle1 As rectangle:
-        Fill: =RGBA(255, 230, 0, 1)
-        Height: =76
-        Width: =1366
+    "'ROS-CON-HamburgerMenu_2' As groupContainer.manualLayoutContainer":
+        Height: =768
+        Width: =If(true, 400, 88)
         ZIndex: =3
 
-    Label6 As label:
-        Align: =Align.Center
-        Font: =Font.Georgia
-        Height: =76
-        Size: =30
-        Text: ="LINK CONTROL(S) TO THE NEW RISK"
-        Width: =1366
-        ZIndex: =5
+        "'ROS-HM-SHA-HamburgerMenuYellowBackground_2' As rectangle":
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =768
+            Width: =Parent.Width
+            ZIndex: =1
 
-    Label7 As label:
-        Font: =Font.Georgia
-        Height: =70
-        Size: =20
-        Text: |
-            =CountIf(Gallery4.AllItems, Checkbox2.Value = true) & " controls selected" 
-        Width: =276
-        Y: =692
-        ZIndex: =6
-
-    "'ROS-HM-CON-SearchButton_3' As groupContainer.manualLayoutContainer":
-        Height: =76
-        Width: =461
-        X: =905
-        Y: =692
-        ZIndex: =8
-
-        "'ROS-HM-SB-LBL-SearchButtonLabel_3' As label":
-            Height: =76
-            Size: =18
-            Text: ="Save"
-            Width: =105
-            X: =260
+        "'ROS-HM-ICO-HamburgerMenuIcon_2' As icon.Hamburger":
+            Icon: =Icon.Hamburger
+            OnSelect: |
+                =
+            X: =12
             ZIndex: =2
 
-        "'ROS-HM-SB-BTN-SearchButton_3' As button":
-            Fill: =RGBA(255, 255, 255, 0)
-            Height: =76
-            HoverFill: =
-            OnSelect: |-
-                =//add all controls to this risk 
-                ClearCollect(SelectedControlsToLink3, Filter(Gallery4.AllItems, Checkbox2.Value = true).ControlID);
-                ForAll(SelectedControlsToLink3, Patch(RelationRC_DB, Defaults(RelationRC_DB), {RiskID: NewRiskID, ControlID: ControlID}));
-                //uncheck all controls
-                UpdateContext({ResetCheckbox:true});
-                UpdateContext({ResetCheckbox:false});
-                Navigate('Risk Overview Screen')
-            Text: =
-            Width: =141
-            X: =260
+        "'ROS-HM-CON-SearchButton_2' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Visible: =SearchOption
+            Width: =Parent.Width
+            Y: =392
             ZIndex: =3
 
-        Icon2 As icon.Save:
-            Icon: =Icon.Save
-            X: =380
-            Y: =6
+            TextInput1 As text:
+                Default: ="Text input"
+                Height: =41
+                X: =40
+                Y: =13
+                ZIndex: =1
+
+        "'ROS-HM-CON-SearchButton_1' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =313
             ZIndex: =4
+
+            "'ROS-HM-SB-ICO-SearchButtonIcon_1' As icon.Search":
+                Height: =67
+                Icon: =Icon.Search
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-SB-LBL-SearchButtonLabel_1' As label":
+                Height: =67
+                Text: ="Search"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-SB-BTN-SearchButton_1' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =// No need to open the open the hamburger menu
+                    
+                    // Open/Close the "Search" option menu
+                    UpdateContext({SearchOption: !SearchOption});
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'CNRS-HM-CON-ContinueWithoutCS_2' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =234
+            ZIndex: =5
+
+            "'CNRS-HM-AB-ICO-ContinueWithoutCSButtonIcon_1' As icon.CheckBadge":
+                Height: =67
+                Icon: =Icon.CheckBadge
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_7' As label":
+                Height: =67
+                Text: ="Save with the selected control(s)"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-AB-BTN-AddButton_7' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =//add all controls to this risk 
+                    ClearCollect(SelectedControlsToLink3, Filter(Gallery4.AllItems, Checkbox2.Value = true).ControlID);
+                    ForAll(SelectedControlsToLink3, Patch(RelationRC_DB, Defaults(RelationRC_DB), {RiskID: NewRiskID, ControlID: ControlID}));
+                    //uncheck all controls
+                    UpdateContext({ResetCheckbox:true});
+                    UpdateContext({ResetCheckbox:false});
+                    Navigate('Risk Overview Screen')
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'CNRS-HM-CON-ContinueWithoutCS_3' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =155
+            ZIndex: =6
+
+            "'CNRS-HM-AB-ICO-ClearButtonIcon_1' As icon.Reset":
+                Height: =67
+                Icon: =Icon.Reset
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_8' As label":
+                Height: =67
+                Text: ="Clear selected control"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-AB-BTN-AddButton_8' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: |-
+                    =ForAll(
+                        Gallery4.AllItems,
+                        Checkbox2.Value = false
+                    )
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'ROS-HM-CON-HomeButton_2' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =76
+            ZIndex: =7
+
+            "'ROS-HM-HB-LBL-HomeButtonLabel_2' As label":
+                Height: =64
+                Text: |-
+                    ="Control(s) selected : " & CountIf(Gallery4.AllItems, Checkbox2.Value = true)
+                Width: =Parent.Width - 88
+                X: =88
+                Y: =3
+                ZIndex: =2
+
+            "'ACTNRS-HM-HB-ICO-HomeButtonIcon_2' As icon.Globe":
+                Height: =67
+                Icon: =Icon.Globe
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =4
+
+    "'ROS-CON-ScreenHeader_2' As groupContainer.manualLayoutContainer":
+        Height: =76
+        Width: =966
+        X: =400
+        ZIndex: =4
+
+        "'ROS-CON-SHA-YellowRectangleHeader_2' As rectangle":
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =76
+            Width: =Parent.Width
+            ZIndex: =1
+
+        "'ROS-CON-LBL-RiskOverviewTitle_2' As label":
+            Align: =Align.Center
+            Font: =Font.Georgia
+            Height: =76
+            Size: =30
+            Text: ="LINK CONTROL(S) TO THE NEW RISK"
+            Width: =Parent.Width
+            ZIndex: =2
 

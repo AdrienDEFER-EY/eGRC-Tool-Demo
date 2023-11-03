@@ -1,12 +1,6 @@
 "'Risk Taxonomy Screen' As screen":
     OnVisible: |
-        =ClearCollect(
-           EmailAddressCollection,
-           "Adrien.Defer@be.ey.com",
-           "Marie.Levrau@be.ey.com",
-           "Sander.Sienaert@be.ey.com"
-        );
-        UpdateContext({RiskState: "BO"});
+        =UpdateContext({RiskState: "BO"});
         UpdateContext({BusinessOwner: ""});
         UpdateContext({SPOC: ""});
         UpdateContext({RiskOwner: ""});
