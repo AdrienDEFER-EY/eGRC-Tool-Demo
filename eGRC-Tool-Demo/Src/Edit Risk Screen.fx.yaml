@@ -81,9 +81,9 @@
                 Height: =67
                 HoverFill: =
                 OnSelect: |-
-                    =Reset('Dropdown9_3');
-                    Reset('Dropdown9_4');
-                    Reset('Dropdown9_5');
+                    =Reset(Dropdown9_3);
+                    Reset(Dropdown9_4);
+                    Reset(Dropdown9_5);
                     Reset('BO-InputEmail_1');
                     Reset('SPOC-InputEmail_1');
                     Reset('RO-InputEmail_1');
