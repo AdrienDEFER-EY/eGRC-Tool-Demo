@@ -3,9 +3,11 @@
     "'Form-DetailsControl' As form":
         DataSource: =ControlDatabaseFD
         DefaultMode: =FormMode.View
+        Height: =692
         Item: =NavigateControlRecord1
-        X: =36
-        Y: =114
+        Width: =1085
+        X: =281
+        Y: =76
         ZIndex: =1
 
         "'Control Description_DataCard1' As typedDataCard.textualEditCard":
@@ -19,7 +21,7 @@
             MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "Control Description")
             Required: =false
             Update: =DataCardValue1_1.Text
-            Width: =266
+            Width: =366
             X: =0
             Y: =0
             ZIndex: =1
@@ -87,7 +89,7 @@
             MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "Control Name")
             Required: =false
             Update: =DataCardValue2_1.Text
-            Width: =266
+            Width: =366
             X: =1
             Y: =0
             ZIndex: =1
@@ -155,7 +157,7 @@
             MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "ControlID")
             Required: =true
             Update: =DataCardValue3_1.Text
-            Width: =266
+            Width: =366
             X: =2
             Y: =0
             ZIndex: =1
@@ -212,32 +214,74 @@
                 Y: =DataCardKey3_1.Y
                 ZIndex: =4
 
-    Rectangle1_5 As rectangle:
-        Fill: =RGBA(255, 230, 0, 1)
+    "'ROS-CON-ScreenHeader_6' As groupContainer.manualLayoutContainer":
         Height: =76
-        Width: =1366
-        ZIndex: =2
+        Width: =1085
+        X: =281
+        ZIndex: =6
 
-    Label6_1 As label:
-        Align: =Align.Center
-        Font: =Font.Georgia
-        Height: =76
-        Size: =30
-        Text: ="Details about selected control"
-        Width: =1366
-        ZIndex: =3
+        "'ROS-CON-SHA-YellowRectangleHeader_6' As rectangle":
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =76
+            Width: =Parent.Width
+            ZIndex: =1
 
-    Rectangle1_10 As rectangle:
-        Fill: =RGBA(255, 230, 0, 1)
-        Height: =76
-        Width: =1366
-        Y: =692
-        ZIndex: =4
+        "'ROS-CON-LBL-RiskOverviewTitle_6' As label":
+            Align: =Align.Center
+            Font: =Font.Georgia
+            Height: =76
+            Size: =30
+            Text: ="SELECTED CONTROL INFORMATION"
+            Width: =Parent.Width
+            ZIndex: =2
 
-    Icon3 As icon.ArrowLeft:
-        Icon: =Icon.ArrowLeft
-        OnSelect: =If(BackArrowEditRisk, Navigate('Edit Risk Screen'), BackArrowEditControl, Navigate('Edit Controls of Risk Screen'), BackArrowInfoControl, Navigate('Information Selected Risk Screen'), Navigate('Add Controls To New Risk Screen'))
-        X: =36
-        Y: =12
-        ZIndex: =5
+    "'ROS-CON-HamburgerMenu_6' As groupContainer.manualLayoutContainer":
+        Height: =768
+        Width: =281
+        ZIndex: =7
+
+        "'ROS-HM-SHA-HamburgerMenuYellowBackground_6' As rectangle":
+            Fill: =RGBA(255, 230, 0, 1)
+            Height: =768
+            Width: =Parent.Width
+            ZIndex: =2
+
+        "'ROS-HM-ICO-HamburgerMenuIcon_6' As icon.Hamburger":
+            Icon: =Icon.Hamburger
+            OnSelect: |
+                =
+            X: =12
+            ZIndex: =3
+
+        "'CNRS-HM-CON-LinkToRiskOverview_3' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =76
+            ZIndex: =8
+
+            "'CNRS-HM-AB-ICO-LinkToRiskOverview_3' As icon.BackArrow":
+                Height: =67
+                Icon: =Icon.BackArrow
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_20' As label":
+                Height: =67
+                Text: ="Navigate back"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-AB-BTN-AddButton_20' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                OnSelect: =If(BackArrowEditRisk, Navigate('Edit Risk Screen'), BackArrowEditControl, Navigate('Edit Controls of Risk Screen'), BackArrowInfoControl, Navigate('Information Selected Risk Screen'), Navigate('Add Controls To New Risk Screen'))
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
 

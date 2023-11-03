@@ -109,7 +109,7 @@
             Items: |-
                 =Distinct(Filter(
                     RiskTaxonomy,
-                   TaxonomyLevel0 = Text(Dropdown9.Selected.Value)
+                   TaxonomyLevel0 = Text('Dropdown9_3'.Selected.Value)
                 ), TaxonomyLevel1)
             Width: =372
             X: =22
@@ -121,8 +121,8 @@
             Items: |-
                 =Distinct(Filter(
                     RiskTaxonomy,
-                    TaxonomyLevel0 = Text(Dropdown9.Selected.Value) And
-                    TaxonomyLevel1 = Text(Dropdown9_1.Selected.Value)
+                    TaxonomyLevel0 = Text('Dropdown9_3'.Selected.Value) And
+                    TaxonomyLevel1 = Text('Dropdown9_4'.Selected.Value)
                 ), TaxonomyLevel2)
             Width: =372
             X: =22
@@ -1203,8 +1203,13 @@
                 Fill: =RGBA(255, 255, 255, 0)
                 Height: =67
                 HoverFill: =
-                OnSelect: |
-                    =
+                OnSelect: |-
+                    =Reset('Dropdown9_3');
+                    Reset('Dropdown9_4');
+                    Reset('Dropdown9_5');
+                    Reset('BO-InputEmail_1');
+                    Reset('SPOC-InputEmail_1');
+                    Reset('RO-InputEmail_1');
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3

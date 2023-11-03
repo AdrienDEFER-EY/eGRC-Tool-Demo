@@ -782,7 +782,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 87,
+                  "charOffset": 91,
                   "snippet": {
                     "text": "And"
                   }
@@ -1247,12 +1247,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.Items"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.Items",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1266,7 +1266,7 @@
               "properties": {
                 "member": "Items",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Gallery2"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2"
               }
             }
           ],
@@ -1287,12 +1287,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.ComboBox1.Items"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.ComboBox1.Items",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1306,7 +1306,7 @@
               "properties": {
                 "member": "Items",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.ComboBox1"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1"
               }
             }
           ],
@@ -1327,12 +1327,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.Items"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.Items",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1346,7 +1346,7 @@
               "properties": {
                 "member": "Items",
                 "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'"
+                "type": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'"
               }
             }
           ],
@@ -1802,12 +1802,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.Items"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.Items",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1821,7 +1821,7 @@
               "properties": {
                 "member": "Items",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Gallery1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1"
               }
             }
           ],
@@ -4032,49 +4032,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Gallery2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.TabIndex",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Gallery2"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2"
               }
             }
           ],
@@ -4092,19 +4062,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.NextArrow2.TabIndex"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.NextArrow2.TabIndex",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Controls of Risk Screen",
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.NextArrow2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.NextArrow2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Gallery2.NextArrow2"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.NextArrow2"
               }
             }
           ],
@@ -4122,19 +4122,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.ComboBox1.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.ComboBox1.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.ComboBox1"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1"
               }
             }
           ],
@@ -4152,49 +4152,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Icon5.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ROS-CON-HamburgerMenu_5'.'ROS-HM-ICO-HamburgerMenuIcon_5'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Icon5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Icon5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Icon5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Icon5.TabIndex",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ROS-CON-HamburgerMenu_5'.'ROS-HM-ICO-HamburgerMenuIcon_5'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Icon5"
+                "module": "Information Selected Risk Screen",
+                "type": "'Information Selected Risk Screen'.'ROS-CON-HamburgerMenu_5'.'ROS-HM-ICO-HamburgerMenuIcon_5'"
               }
             }
           ],
@@ -4212,19 +4182,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Specific Record Screen'.Icon3.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ROS-CON-HamburgerMenu_5'.'ROS-HM-ICO-HamburgerMenuIcon_5'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Specific Record Screen'.Icon3.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ROS-CON-HamburgerMenu_5'.'ROS-HM-ICO-HamburgerMenuIcon_5'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Information Specific Record Screen",
-                "type": "'Information Specific Record Screen'.Icon3"
+                "module": "Information Selected Risk Screen",
+                "type": "'Information Selected Risk Screen'.'ROS-CON-HamburgerMenu_5'.'ROS-HM-ICO-HamburgerMenuIcon_5'"
               }
             }
           ],
@@ -4242,19 +4212,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Specific Record Screen'.Icon3.TabIndex"
+                  "fullyQualifiedName": "'Information Specific Record Screen'.'ROS-CON-HamburgerMenu_6'.'ROS-HM-ICO-HamburgerMenuIcon_6'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Specific Record Screen'.Icon3.TabIndex",
+                  "fullyQualifiedName": "'Information Specific Record Screen'.'ROS-CON-HamburgerMenu_6'.'ROS-HM-ICO-HamburgerMenuIcon_6'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Information Specific Record Screen",
-                "type": "'Information Specific Record Screen'.Icon3"
+                "type": "'Information Specific Record Screen'.'ROS-CON-HamburgerMenu_6'.'ROS-HM-ICO-HamburgerMenuIcon_6'"
               }
             }
           ],
@@ -4266,6 +4236,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Information Specific Record Screen'.'ROS-CON-HamburgerMenu_6'.'ROS-HM-ICO-HamburgerMenuIcon_6'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Information Specific Record Screen'.'ROS-CON-HamburgerMenu_6'.'ROS-HM-ICO-HamburgerMenuIcon_6'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Information Specific Record Screen",
+                "type": "'Information Specific Record Screen'.'ROS-CON-HamburgerMenu_6'.'ROS-HM-ICO-HamburgerMenuIcon_6'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -4362,289 +4362,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Department L1_DataCard2'.DataCardValue20.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.NextArrow1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Department L1_DataCard2'.DataCardValue20.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Department L1_DataCard2'.DataCardValue20"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Reason for Risk Closure_DataCard2'.DataCardValue21.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Reason for Risk Closure_DataCard2'.DataCardValue21.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Reason for Risk Closure_DataCard2'.DataCardValue21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Cause_DataCard2'.DataCardValue22.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Cause_DataCard2'.DataCardValue22.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Risk Cause_DataCard2'.DataCardValue22"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Confidentiality_DataCard2'.DataCardValue24.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Confidentiality_DataCard2'.DataCardValue24.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Risk Confidentiality_DataCard2'.DataCardValue24"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Description_DataCard2'.DataCardValue25.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Description_DataCard2'.DataCardValue25.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Risk Description_DataCard2'.DataCardValue25"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Group_DataCard2'.DataCardValue26.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Group_DataCard2'.DataCardValue26.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Risk Group_DataCard2'.DataCardValue26"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.RiskID_DataCard1.DataCardValue27.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.RiskID_DataCard1.DataCardValue27.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.RiskID_DataCard1.DataCardValue27"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Name_DataCard2'.DataCardValue28.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.'Risk Name_DataCard2'.DataCardValue28.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm.'Risk Name_DataCard2'.DataCardValue28"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Icon4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Icon4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.Icon4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Icon4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Icon4.TabIndex",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.NextArrow1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.Icon4"
+                "type": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.NextArrow1_1"
               }
             }
           ],
@@ -4662,19 +4392,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'"
+                "type": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'"
               }
             }
           ],
@@ -4692,79 +4452,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.TabIndex"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Name_DataCard2'.DataCardValue28.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.NextArrow1_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.NextArrow1_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.NextArrow1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Container1.Icon6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Container1.Icon6.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Name_DataCard2'.DataCardValue28.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.Container1.Icon6"
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Name_DataCard2'.DataCardValue28"
               }
             }
           ],
@@ -4782,19 +4482,139 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Container1.Icon6.TabIndex"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.RiskID_DataCard1.DataCardValue27.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.Container1.Icon6.TabIndex",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.RiskID_DataCard1.DataCardValue27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.RiskID_DataCard1.DataCardValue27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Group_DataCard2'.DataCardValue26.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Group_DataCard2'.DataCardValue26.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Group_DataCard2'.DataCardValue26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Description_DataCard2'.DataCardValue25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Description_DataCard2'.DataCardValue25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Description_DataCard2'.DataCardValue25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Confidentiality_DataCard2'.DataCardValue24.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Confidentiality_DataCard2'.DataCardValue24.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Confidentiality_DataCard2'.DataCardValue24"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'ROS-HM-ICO-HamburgerMenuIcon_4'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'ROS-HM-ICO-HamburgerMenuIcon_4'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.Container1.Icon6"
+                "module": "Edit Controls of Risk Screen",
+                "type": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'ROS-HM-ICO-HamburgerMenuIcon_4'"
               }
             }
           ],
@@ -4806,6 +4626,126 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'ROS-HM-ICO-HamburgerMenuIcon_4'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'ROS-HM-ICO-HamburgerMenuIcon_4'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Controls of Risk Screen",
+                "type": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'ROS-HM-ICO-HamburgerMenuIcon_4'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Reason for Risk Closure_DataCard2'.DataCardValue21.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Reason for Risk Closure_DataCard2'.DataCardValue21.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Reason for Risk Closure_DataCard2'.DataCardValue21"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Department L1_DataCard2'.DataCardValue20.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Department L1_DataCard2'.DataCardValue20.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Department L1_DataCard2'.DataCardValue20"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Cause_DataCard2'.DataCardValue22.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Cause_DataCard2'.DataCardValue22.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.'Risk Cause_DataCard2'.DataCardValue22"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -5772,49 +5712,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Icon7.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Icon7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Icon7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Icon7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Icon7.TabIndex",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Icon7"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1"
               }
             }
           ],
@@ -5832,19 +5742,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.DateValue1.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.DateValue1.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.DateValue1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1"
               }
             }
           ],
@@ -5862,19 +5772,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.HourValue1.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.RiskID_DataCard2.DataCardValue40.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.HourValue1.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.RiskID_DataCard2.DataCardValue40.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.HourValue1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.RiskID_DataCard2.DataCardValue40"
               }
             }
           ],
@@ -5892,19 +5802,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.MinuteValue1.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Type Level II_DataCard2'.DataCardValue39.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.MinuteValue1.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Type Level II_DataCard2'.DataCardValue39.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Created_DataCard1'.MinuteValue1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Type Level II_DataCard2'.DataCardValue39"
               }
             }
           ],
@@ -5922,19 +5832,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.DateValue2.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Type Level I_DataCard2'.DataCardValue38.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.DateValue2.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Type Level I_DataCard2'.DataCardValue38.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.DateValue2"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Type Level I_DataCard2'.DataCardValue38"
               }
             }
           ],
@@ -5952,19 +5862,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.HourValue2.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Status_DataCard2'.DataCardValue37.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.HourValue2.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Status_DataCard2'.DataCardValue37.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.HourValue2"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Status_DataCard2'.DataCardValue37"
               }
             }
           ],
@@ -5982,19 +5892,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.MinuteValue2.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Severity_DataCard2'.DataCardValue36.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.MinuteValue2.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Severity_DataCard2'.DataCardValue36.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.MinuteValue2"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Severity_DataCard2'.DataCardValue36"
               }
             }
           ],
@@ -6012,19 +5922,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Department L1_DataCard3'.DataCardValue17.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Owner_DataCard2'.DataCardValue35.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Department L1_DataCard3'.DataCardValue17.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Owner_DataCard2'.DataCardValue35.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Department L1_DataCard3'.DataCardValue17"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Owner_DataCard2'.DataCardValue35"
               }
             }
           ],
@@ -6042,19 +5952,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Cause_DataCard3'.DataCardValue18.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Name_DataCard3'.DataCardValue34.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Cause_DataCard3'.DataCardValue18.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Name_DataCard3'.DataCardValue34.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Cause_DataCard3'.DataCardValue18"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Name_DataCard3'.DataCardValue34"
               }
             }
           ],
@@ -6072,19 +5982,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Reason for Risk Closure_DataCard3'.DataCardValue19.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Likelihood_DataCard2'.DataCardValue33.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Reason for Risk Closure_DataCard3'.DataCardValue19.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Likelihood_DataCard2'.DataCardValue33.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Reason for Risk Closure_DataCard3'.DataCardValue19"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Likelihood_DataCard2'.DataCardValue33"
               }
             }
           ],
@@ -6102,19 +6012,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Confidentiality_DataCard3'.DataCardValue29.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Level of Concern_DataCard2'.DataCardValue32.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Confidentiality_DataCard3'.DataCardValue29.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Level of Concern_DataCard2'.DataCardValue32.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Confidentiality_DataCard3'.DataCardValue29"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Level of Concern_DataCard2'.DataCardValue32"
               }
             }
           ],
@@ -6132,19 +6042,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Description_DataCard3'.DataCardValue30.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Group_DataCard3'.DataCardValue31.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Description_DataCard3'.DataCardValue30.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Group_DataCard3'.DataCardValue31.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Description_DataCard3'.DataCardValue30"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Group_DataCard3'.DataCardValue31"
               }
             }
           ],
@@ -6162,19 +6072,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Group_DataCard3'.DataCardValue31.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Description_DataCard3'.DataCardValue30.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Group_DataCard3'.DataCardValue31.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Description_DataCard3'.DataCardValue30.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Group_DataCard3'.DataCardValue31"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Description_DataCard3'.DataCardValue30"
               }
             }
           ],
@@ -6192,19 +6102,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Level of Concern_DataCard2'.DataCardValue32.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Confidentiality_DataCard3'.DataCardValue29.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Level of Concern_DataCard2'.DataCardValue32.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Confidentiality_DataCard3'.DataCardValue29.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Level of Concern_DataCard2'.DataCardValue32"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Confidentiality_DataCard3'.DataCardValue29"
               }
             }
           ],
@@ -6222,19 +6132,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Likelihood_DataCard2'.DataCardValue33.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Reason for Risk Closure_DataCard3'.DataCardValue19.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Likelihood_DataCard2'.DataCardValue33.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Reason for Risk Closure_DataCard3'.DataCardValue19.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Likelihood_DataCard2'.DataCardValue33"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Reason for Risk Closure_DataCard3'.DataCardValue19"
               }
             }
           ],
@@ -6252,19 +6162,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Name_DataCard3'.DataCardValue34.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Cause_DataCard3'.DataCardValue18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Name_DataCard3'.DataCardValue34.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Cause_DataCard3'.DataCardValue18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Name_DataCard3'.DataCardValue34"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Risk Cause_DataCard3'.DataCardValue18"
               }
             }
           ],
@@ -6282,19 +6192,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Owner_DataCard2'.DataCardValue35.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Department L1_DataCard3'.DataCardValue17.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Owner_DataCard2'.DataCardValue35.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Department L1_DataCard3'.DataCardValue17.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Owner_DataCard2'.DataCardValue35"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Department L1_DataCard3'.DataCardValue17"
               }
             }
           ],
@@ -6312,19 +6222,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Severity_DataCard2'.DataCardValue36.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.MinuteValue2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Severity_DataCard2'.DataCardValue36.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.MinuteValue2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Severity_DataCard2'.DataCardValue36"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.MinuteValue2"
               }
             }
           ],
@@ -6342,19 +6252,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Status_DataCard2'.DataCardValue37.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.HourValue2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Status_DataCard2'.DataCardValue37.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.HourValue2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Status_DataCard2'.DataCardValue37"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.HourValue2"
               }
             }
           ],
@@ -6372,19 +6282,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Type Level I_DataCard2'.DataCardValue38.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.DateValue2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Type Level I_DataCard2'.DataCardValue38.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.DateValue2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Type Level I_DataCard2'.DataCardValue38"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Last Modified_DataCard1'.DateValue2"
               }
             }
           ],
@@ -6402,19 +6312,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Type Level II_DataCard2'.DataCardValue39.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.MinuteValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Type Level II_DataCard2'.DataCardValue39.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.MinuteValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Risk Type Level II_DataCard2'.DataCardValue39"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.MinuteValue1"
               }
             }
           ],
@@ -6432,19 +6342,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.RiskID_DataCard2.DataCardValue40.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.HourValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.RiskID_DataCard2.DataCardValue40.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.HourValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.RiskID_DataCard2.DataCardValue40"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.HourValue1"
               }
             }
           ],
@@ -6462,19 +6372,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Who Last Modified_DataCard1'.DataCardValue41.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.DateValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Who Last Modified_DataCard1'.DataCardValue41.AccessibleLabel",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.DateValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.'Form-DetailsRisk'.'Who Last Modified_DataCard1'.DataCardValue41"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Date Created_DataCard1'.DateValue1"
               }
             }
           ],
@@ -6492,49 +6402,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.NextArrow1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.TabIndex",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.NextArrow1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Gallery1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.NextArrow1"
               }
             }
           ],
@@ -6552,19 +6432,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.NextArrow1.TabIndex"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Who Last Modified_DataCard1'.DataCardValue41.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.NextArrow1.TabIndex",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Who Last Modified_DataCard1'.DataCardValue41.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Gallery1.NextArrow1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-RiskInformation'.'Form-DetailsRisk'.'Who Last Modified_DataCard1'.DataCardValue41"
               }
             }
           ],
@@ -6574,8 +6454,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6912,6 +6792,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ROS-CON-HamburgerMenu_3'.'ROS-HM-ICO-HamburgerMenuIcon_3'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ROS-CON-HamburgerMenu_3'.'ROS-HM-ICO-HamburgerMenuIcon_3'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ROS-CON-HamburgerMenu_3'.'ROS-HM-ICO-HamburgerMenuIcon_3'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ROS-CON-HamburgerMenu_3'.'ROS-HM-ICO-HamburgerMenuIcon_3'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ROS-CON-HamburgerMenu_3'.'ROS-HM-ICO-HamburgerMenuIcon_3'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Edit Risk Screen",
+                "type": "'Edit Risk Screen'.'ROS-CON-HamburgerMenu_3'.'ROS-HM-ICO-HamburgerMenuIcon_3'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'CNRS-HM-CON-EditLinkedControls_1'.'ROS-HM-AB-BTN-AddButton_17'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'CNRS-HM-CON-EditLinkedControls_1'.'ROS-HM-AB-BTN-AddButton_17'.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Edit Controls of Risk Screen",
+                "type": "'Edit Controls of Risk Screen'.'ROS-CON-HamburgerMenu_4'.'CNRS-HM-CON-EditLinkedControls_1'.'ROS-HM-AB-BTN-AddButton_17'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Edit Controls of Risk Screen'.OnVisible"
                 }
               ],
@@ -6942,49 +6912,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Button3.OnSelect"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.Button3.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Button3.OnSelect",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.Button3.OnSelect",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "OnSelect",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Button3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Button2.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Button2.OnSelect",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Button2"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.Button3"
               }
             }
           ],
@@ -7152,79 +7092,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown9_5.Items"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown9_5.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Create New Risk Screen",
-                "type": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown9_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown9_4.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown9_4.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Create New Risk Screen",
-                "type": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown9_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.Gallery2.Items",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2.Items",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Items",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.Gallery2"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-LinkedControlGallery'.Gallery2"
               }
             }
           ],
@@ -7242,19 +7122,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.ComboBox1.Items"
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.ComboBox1.Items",
+                  "fullyQualifiedName": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1.Items",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Items",
                 "module": "Edit Controls of Risk Screen",
-                "type": "'Edit Controls of Risk Screen'.ComboBox1"
+                "type": "'Edit Controls of Risk Screen'.'ECRS-CON-AddControl'.ComboBox1"
               }
             }
           ],
@@ -7272,19 +7152,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.Item"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.Item"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.EditRiskForm.Item",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm.Item",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Item",
                 "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.EditRiskForm"
+                "type": "'Edit Risk Screen'.'ERS-CON-EditRiskInformation'.EditRiskForm"
               }
             }
           ],
@@ -7302,19 +7182,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.Items"
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'.Items",
+                  "fullyQualifiedName": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'.Items",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Items",
                 "module": "Edit Risk Screen",
-                "type": "'Edit Risk Screen'.'GAL-EditControlsOfRisk'"
+                "type": "'Edit Risk Screen'.'ERS-CON-EditLinkedControls'.'GAL-EditControlsOfRisk'"
               }
             }
           ],
@@ -7512,19 +7392,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.Items"
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Information Selected Risk Screen'.Gallery1.Items",
+                  "fullyQualifiedName": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1.Items",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Items",
                 "module": "Information Selected Risk Screen",
-                "type": "'Information Selected Risk Screen'.Gallery1"
+                "type": "'Information Selected Risk Screen'.'ISRS-CON-LinkedControls'.Gallery1"
               }
             }
           ],

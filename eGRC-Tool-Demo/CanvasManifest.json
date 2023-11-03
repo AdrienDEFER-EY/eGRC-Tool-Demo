@@ -110,11 +110,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "1de0a995-e7e3-4572-b8a9-94ec45af5a41",
-    "Id": "f9b555ed-2045-49b2-b1c0-67e204230792",
+    "Id": "34f0e29b-27f1-4745-82e9-fe6878961294",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "eGRC%2BTool%2BFinal%2BDemo.msapp",
+    "Name": "eGRC Tool Final Demo",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false

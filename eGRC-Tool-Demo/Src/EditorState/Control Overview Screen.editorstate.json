@@ -1751,7 +1751,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "COS-CON-OptionContainer",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2843,7 +2843,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "COS-GAL-Gallery",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28121,7 +28121,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "COS-OC-SOO-BTN-SortingChoiceValidation",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33551,7 +33551,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "COS-OC-SOO-CON-Criteria3",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
