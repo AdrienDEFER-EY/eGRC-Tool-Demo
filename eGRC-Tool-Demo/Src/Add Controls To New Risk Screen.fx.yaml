@@ -10,9 +10,9 @@
             	SearchOption,
             	Filter(
                     ControlDatabaseFD, 
-                    StartsWith(Text(ControlID), 'TextInput1'.Text) Or
-                    StartsWith(Text('Control Name'), 'TextInput1'.Text) And
-                    Len('TextInput1'.Text) = 0
+                    StartsWith(Text(ControlID), TextInput1.Text) Or
+                    StartsWith(Text('Control Name'), TextInput1.Text) And
+                    Len(TextInput1.Text) = 0
                 ),
                 ControlDatabaseFD
             )
