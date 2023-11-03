@@ -1,6 +1,8 @@
 "'Create New Risk Screen' As screen":
     OnVisible: |-
-        =ClearCollect(
+        =// Close the hamburger menu when the page is loaded
+        UpdateContext({OpenMenu: false});
+        ClearCollect(
            EmailAddressCollection,
            "Adrien.Defer@be.ey.com",
            "Marie.Levrau@be.ey.com",
@@ -159,8 +161,8 @@
     "'CNRS-CON-AddingRisk' As groupContainer.manualLayoutContainer":
         BorderThickness: =2
         Height: =692
-        Width: =550
-        X: =400
+        Width: =If(OpenMenu, 550, 862)
+        X: ='ROS-CON-HamburgerMenu_1'.Width
         Y: =76
         ZIndex: =3
 
@@ -170,7 +172,7 @@
             DefaultMode: =FormMode.New
             Height: =624
             NumberOfColumns: =1
-            Width: =550
+            Width: =Parent.Width
             Y: =67
             ZIndex: =1
 
@@ -1134,13 +1136,13 @@
             Height: =67
             Size: =20
             Text: ="RISK GENERAL INFORMATION"
-            Width: =550
+            Width: =Parent.Width
             ZIndex: =2
 
     "'ROS-CON-ScreenHeader_1' As groupContainer.manualLayoutContainer":
         Height: =76
-        Width: =966
-        X: =400
+        Width: =1278 - 'ROS-HM-SHA-HamburgerMenuYellowBackground_1'.Width + 88
+        X: ='ROS-HM-SHA-HamburgerMenuYellowBackground_1'.Width
         ZIndex: =5
 
         "'ROS-CON-SHA-YellowRectangleHeader_1' As rectangle":
@@ -1160,7 +1162,7 @@
 
     "'ROS-CON-HamburgerMenu_1' As groupContainer.manualLayoutContainer":
         Height: =768
-        Width: =If(true, 400, 88)
+        Width: =If(OpenMenu, 400, 88)
         ZIndex: =6
 
         "'ROS-HM-SHA-HamburgerMenuYellowBackground_1' As rectangle":
@@ -1172,7 +1174,7 @@
         "'ROS-HM-ICO-HamburgerMenuIcon_1' As icon.Hamburger":
             Icon: =Icon.Hamburger
             OnSelect: |
-                =
+                =UpdateContext({OpenMenu: !OpenMenu})
             X: =12
             ZIndex: =3
 

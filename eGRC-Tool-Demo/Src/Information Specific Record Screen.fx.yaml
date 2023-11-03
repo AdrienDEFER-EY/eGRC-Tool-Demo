@@ -1,12 +1,15 @@
 "'Information Specific Record Screen' As screen":
+    OnVisible: |-
+        =// Close the hamburger menu when the page is loaded
+        UpdateContext({OpenMenu: false});
 
     "'Form-DetailsControl' As form":
         DataSource: =ControlDatabaseFD
         DefaultMode: =FormMode.View
         Height: =692
         Item: =NavigateControlRecord1
-        Width: =1085
-        X: =281
+        Width: =If(OpenMenu, 1044, 1252)
+        X: ='ROS-HM-SHA-HamburgerMenuYellowBackground_6'.Width
         Y: =76
         ZIndex: =1
 
@@ -21,7 +24,7 @@
             MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "Control Description")
             Required: =false
             Update: =DataCardValue1_1.Text
-            Width: =366
+            Width: =400
             X: =0
             Y: =0
             ZIndex: =1
@@ -89,7 +92,7 @@
             MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "Control Name")
             Required: =false
             Update: =DataCardValue2_1.Text
-            Width: =366
+            Width: =400
             X: =1
             Y: =0
             ZIndex: =1
@@ -157,7 +160,7 @@
             MaxLength: =DataSourceInfo([@ControlDatabaseFD], DataSourceInfo.MaxLength, "ControlID")
             Required: =true
             Update: =DataCardValue3_1.Text
-            Width: =366
+            Width: =400
             X: =2
             Y: =0
             ZIndex: =1
@@ -216,8 +219,8 @@
 
     "'ROS-CON-ScreenHeader_6' As groupContainer.manualLayoutContainer":
         Height: =76
-        Width: =1085
-        X: =281
+        Width: =1278 - 'ROS-HM-SHA-HamburgerMenuYellowBackground_6'.Width + 88
+        X: ='ROS-HM-SHA-HamburgerMenuYellowBackground_6'.Width
         ZIndex: =6
 
         "'ROS-CON-SHA-YellowRectangleHeader_6' As rectangle":
@@ -237,7 +240,7 @@
 
     "'ROS-CON-HamburgerMenu_6' As groupContainer.manualLayoutContainer":
         Height: =768
-        Width: =281
+        Width: =If(OpenMenu, 230, 88)
         ZIndex: =7
 
         "'ROS-HM-SHA-HamburgerMenuYellowBackground_6' As rectangle":
@@ -248,8 +251,8 @@
 
         "'ROS-HM-ICO-HamburgerMenuIcon_6' As icon.Hamburger":
             Icon: =Icon.Hamburger
-            OnSelect: |
-                =
+            OnSelect: |-
+                =UpdateContext({OpenMenu: !OpenMenu})
             X: =12
             ZIndex: =3
 
