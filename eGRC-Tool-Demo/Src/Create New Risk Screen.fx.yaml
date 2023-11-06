@@ -445,9 +445,12 @@
 
                 StarVisible8_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey8_1.Height
                     Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Visible: |-
+                        =//And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        true
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey8_1.Y
@@ -513,9 +516,12 @@
 
                 StarVisible10_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey11_1.Height
                     Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Visible: |-
+                        =//And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        true
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey11_1.Y
@@ -1371,7 +1377,8 @@
                             RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
                             'Date Created': Now(), 
                             'Date Last Modified': Now(), 
-                            'Who Last Modified': User().FullName
+                            'Who Last Modified': User().FullName, 
+                            RiskStatus: "BO"
                         }
                     );
                     Navigate('Add Controls To New Risk Screen')

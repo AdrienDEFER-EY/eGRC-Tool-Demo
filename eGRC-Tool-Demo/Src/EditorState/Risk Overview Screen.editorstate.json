@@ -1598,7 +1598,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ROS-CON-OptionContainer",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2102,7 +2102,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ROS-GAL-Gallery",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29455,7 +29455,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ROS-OC-SOO-BTN-SortingChoiceValidation",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34885,7 +34885,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ROS-OC-SOO-CON-Criteria3",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
