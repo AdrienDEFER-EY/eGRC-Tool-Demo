@@ -89,11 +89,12 @@
                     );
                     Patch(
                         RiskDatabaseFD,
-                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                        NavigateRiskRecord,  // Retain existing values in the record
                         {
                             RiskStatus: "SPOC"
                         }
-                    )
+                    ); 
+                    Refresh(RiskDatabaseFD)
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3
@@ -137,7 +138,7 @@
                     );
                     Patch(
                         RiskDatabaseFD,
-                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                        NavigateRiskRecord,  // Retain existing values in the record
                         {
                             RiskStatus: "BO"
                         }
@@ -185,7 +186,7 @@
                     );
                     Patch(
                         RiskDatabaseFD,
-                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                        NavigateRiskRecord,  // Retain existing values in the record
                         {
                             RiskStatus: "RO"
                         }
