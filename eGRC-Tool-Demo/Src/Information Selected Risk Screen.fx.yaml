@@ -162,7 +162,7 @@
             "'ROS-HM-AB-LBL-AddButtonLabel_24' As label":
                 Height: =67
                 Text: |-
-                    ="Risk state : "
+                    ="Risk state : " & NavigateRiskRecord.RiskStatus
                 Width: =Parent.Width - 88
                 X: =88
                 ZIndex: =2
