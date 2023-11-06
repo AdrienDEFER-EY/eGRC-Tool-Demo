@@ -1247,6 +1247,396 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 320,
+                  "snippet": {
+                    "text": "DataCardValue4_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue4_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 336,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 574,
+                  "snippet": {
+                    "text": "DataCardValue9_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue9_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 590,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 876,
+                  "snippet": {
+                    "text": "DataCardValue18_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue18_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 893,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 930,
+                  "snippet": {
+                    "text": "DataCardValue19_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue19_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 947,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 850,
+                  "charOffset": 110,
+                  "snippet": {
+                    "text": "Patch(\n    RiskDatabaseFD,\n    Defaults(RiskDatabaseFD),  // Retain existing values in the record\n    {\n        RiskID: \"ID\" & GeneratedID,\n        'Risk Name': DataCardValue14_1.Text,\n        'Department L1': DataCardValue4_1.Text,\n        'Reason for Risk Closure': DataCardValue5_1.Text,\n        'Risk Cause': DataCardValue6_1.Text,\n        'Risk Confidentiality': DataCardValue7_1.Text,\n        'Risk Description': DataCardValue8_1.Text,\n        'Risk Group': DataCardValue9_1.Text,\n        'Risk Level of Concern': DataCardValue11_1.Text,\n        'Risk Likelihood': DataCardValue13_1.Text,\n        'Risk Owner': DataCardValue15_1.Text,\n        'Risk Severity': DataCardValue16_1.Text,\n        'Risk Status': DataCardValue17_1.Text,\n        'Risk Type Level I': DataCardValue18_1.Text,\n        'Risk Type Level II': DataCardValue19_1.Text\n    }\n)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 746,
+                  "charOffset": 212,
+                  "snippet": {
+                    "text": "{\n        RiskID: \"ID\" & GeneratedID,\n        'Risk Name': DataCardValue14_1.Text,\n        'Department L1': DataCardValue4_1.Text,\n        'Reason for Risk Closure': DataCardValue5_1.Text,\n        'Risk Cause': DataCardValue6_1.Text,\n        'Risk Confidentiality': DataCardValue7_1.Text,\n        'Risk Description': DataCardValue8_1.Text,\n        'Risk Group': DataCardValue9_1.Text,\n        'Risk Level of Concern': DataCardValue11_1.Text,\n        'Risk Likelihood': DataCardValue13_1.Text,\n        'Risk Owner': DataCardValue15_1.Text,\n        'Risk Severity': DataCardValue16_1.Text,\n        'Risk Status': DataCardValue17_1.Text,\n        'Risk Type Level I': DataCardValue18_1.Text,\n        'Risk Type Level II': DataCardValue19_1.Text\n    }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create New Risk Screen",
+                "type": "'Create New Risk Screen'.'ROS-CON-HamburgerMenu_1'.'CNRS-HM-CON-ContinueWithCS'.'ROS-HM-AB-BTN-AddButton_1'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Department L1",
+              "Text",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-RiskTaxonomy'.Dropdown_taxLevel2.Items"
                 }
               ],
