@@ -50,6 +50,123 @@
                 Width: =Parent.Width
                 ZIndex: =4
 
+        "'CNRS-HM-CON-LinkToRiskOverview_4' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =155
+            ZIndex: =9
+
+            "'CNRS-HM-AB-ICO-LinkToRiskOverview_4' As icon.Send":
+                Height: =67
+                Icon: =Icon.Send
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_21' As label":
+                Height: =67
+                Text: ="Send risk to SPOC"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-AB-BTN-AddButton_21' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'CNRS-HM-CON-LinkToRiskOverview_5' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =234
+            ZIndex: =10
+
+            "'CNRS-HM-AB-ICO-LinkToRiskOverview_52' As icon.Send":
+                Height: =67
+                Icon: =Icon.Send
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_22' As label":
+                Height: =67
+                Text: ="Send risk back to BO"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-AB-BTN-AddButton_22' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'CNRS-HM-CON-LinkToRiskOverview_6' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =155
+            ZIndex: =11
+
+            "'CNRS-HM-AB-ICO-LinkToRiskOverview_5' As icon.Send":
+                Height: =67
+                Icon: =Icon.Send
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_23' As label":
+                Height: =67
+                Text: ="Send risk to RO"
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
+            "'ROS-HM-AB-BTN-AddButton_23' As button":
+                Fill: =RGBA(255, 255, 255, 0)
+                Height: =67
+                HoverFill: =
+                Text: =
+                Width: =Parent.Width
+                ZIndex: =3
+
+        "'CNRS-HM-CON-LinkToRiskOverview_7' As groupContainer.manualLayoutContainer":
+            Height: =67
+            Width: =Parent.Width
+            Y: =313
+            ZIndex: =12
+
+            "'CNRS-HM-AB-ICO-LinkToRiskOverview_53' As icon.Bookmark":
+                Height: =67
+                Icon: =Icon.Bookmark
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                X: =12
+                ZIndex: =1
+
+            "'ROS-HM-AB-LBL-AddButtonLabel_24' As label":
+                Height: =67
+                Text: |-
+                    ="Risk state : "
+                Width: =Parent.Width - 88
+                X: =88
+                ZIndex: =2
+
     "'ROS-CON-ScreenHeader_5' As groupContainer.manualLayoutContainer":
         Height: =76
         Width: =1085
