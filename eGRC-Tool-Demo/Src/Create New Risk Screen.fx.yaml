@@ -1134,7 +1134,7 @@
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
-                    Items: =["Emerging risk", "Finance risk"]
+                    Items: =["Emerging risk", "Key risk", "Process risk"]
                     Tooltip: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     X: =30
@@ -1308,7 +1308,11 @@
                             RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value, 
                             RiskOwner: 'RO-InputEmail_1'.Selected.Value, 
                             RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value, 
-                            RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value
+                            RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
+                            'Date Created': Now(), 
+                            'Date Last Modified': Now(), 
+                            'Who Last Modified': User().FullName
+                            
                         }
                     );
                     Navigate('Risk Overview Screen')
@@ -1351,20 +1355,29 @@
                         Defaults(RiskDatabaseFD),  // Retain existing values in the record
                         {
                             RiskID: "ID" & GeneratedID,
-                            'Risk Name': DataCardValue14_1.Text,
-                            'Department L1': DataCardValue4_1.Text,
+                            'Risk Name': DataCardValue14_1.Text, 
+                            'Department L1': DataCardValue46.Selected.Value,
                             'Reason for Risk Closure': DataCardValue5_1.Text,
                             'Risk Cause': DataCardValue6_1.Text,
                             'Risk Confidentiality': DataCardValue7_1.Text,
                             'Risk Description': DataCardValue8_1.Text,
-                            'Risk Group': DataCardValue9_1.Text,
+                            'Risk Group': DataCardValue55.Selected.Value,
                             'Risk Level of Concern': DataCardValue11_1.Text,
                             'Risk Likelihood': DataCardValue13_1.Text,
                             'Risk Owner': DataCardValue15_1.Text,
                             'Risk Severity': DataCardValue16_1.Text,
-                            'Risk Status': DataCardValue17_1.Text,
-                            'Risk Type Level I': DataCardValue18_1.Text,
-                            'Risk Type Level II': DataCardValue19_1.Text
+                            'Risk Status': DataCardValue54.Selected.Value,
+                            'Risk Type Level I': DataCardValue50.Selected.Value,
+                            'Risk Type Level II': DataCardValue51.Selected.Value, 
+                            RiskTaxonomyLevel1: Dropdown_taxLevel0.Selected.Value, 
+                            RiskTaxonomyLevel2: Dropdown_taxLevel1.Selected.Value, 
+                            RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value, 
+                            RiskOwner: 'RO-InputEmail_1'.Selected.Value, 
+                            RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value, 
+                            RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
+                            'Date Created': Now(), 
+                            'Date Last Modified': Now(), 
+                            'Who Last Modified': User().FullName
                         }
                     );
                     Navigate('Add Controls To New Risk Screen')

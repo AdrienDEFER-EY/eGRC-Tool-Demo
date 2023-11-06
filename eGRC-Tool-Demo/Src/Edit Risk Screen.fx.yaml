@@ -48,6 +48,7 @@
                 HoverFill: =
                 OnSelect: |-
                     =SubmitForm(EditRiskForm);
+                    Patch(RiskDatabaseFD, 'ROS-GAL-Gallery'.Selected, {'Who Last Modified': User().FullName, 'Date Last Modified': Now()});
                     Navigate('Risk Overview Screen')
                 Text: =
                 Width: =Parent.Width
