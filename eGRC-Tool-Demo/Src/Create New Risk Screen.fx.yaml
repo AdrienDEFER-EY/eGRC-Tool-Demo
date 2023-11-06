@@ -187,9 +187,8 @@
                 MaxLength: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.MaxLength, "Reason for Risk Closure")
                 Required: =false
                 Update: =DataCardValue5_1.Text
-                Visible: |-
-                    =//If(ThisItem.'Risk Status' = 'Closed'
-                    true
+                Visible: |
+                    =If(DataCardValue44.Selected.Value = "Closed", true, false)
                 Width: =561
                 X: =0
                 Y: =0
@@ -239,9 +238,12 @@
 
                 StarVisible5_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey5_1.Height
                     Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Visible: |-
+                        =//And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        true
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey5_1.Y
@@ -307,9 +309,12 @@
 
                 StarVisible6_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey6_1.Height
                     Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Visible: |-
+                        =//And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        true
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey6_1.Y
@@ -369,9 +374,12 @@
 
                 StarVisible43 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey44.Height
                     Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Visible: |-
+                        =//And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        true
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey44.Y
@@ -1296,8 +1304,9 @@
                             RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
                             'Date Created': Now(), 
                             'Date Last Modified': Now(), 
-                            'Who Last Modified': User().FullName,
+                            'Who Last Modified': User().FullName, 
                             RiskStatus: "BO"
+                            
                         }
                     );
                     Navigate('Risk Overview Screen')
