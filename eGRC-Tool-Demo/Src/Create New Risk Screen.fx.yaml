@@ -324,6 +324,15 @@
                     Y: =DataCardKey6_1.Y
                     ZIndex: =4
 
+                Icon3 As icon.Information:
+                    Height: =32
+                    Icon: =Icon.Information
+                    Tooltip: ="Insert the cause of the risk"
+                    Width: =20
+                    X: =125
+                    Y: =10
+                    ZIndex: =5
+
             "'Risk Confidentiality_DataCard4' As typedDataCard.allowedValuesStringEditCard":
                 AllowedValues: =DataSourceInfo([@RiskDatabaseFD], DataSourceInfo.AllowedValues, "Risk Confidentiality")
                 BorderStyle: =BorderStyle.Solid
