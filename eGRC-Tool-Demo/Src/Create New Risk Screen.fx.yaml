@@ -1308,7 +1308,8 @@
                             RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value, 
                             RiskOwner: 'RO-InputEmail_1'.Selected.Value, 
                             RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value, 
-                            RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value
+                            RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
+                            RiskStatus: "BO"
                         }
                     );
                     Navigate('Risk Overview Screen')
