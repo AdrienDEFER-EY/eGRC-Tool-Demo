@@ -5742,19 +5742,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Confidentiality_DataCard1_1'.DataCardValue7_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Confidentiality_DataCard4'.DataCardValue42.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Confidentiality_DataCard1_1'.DataCardValue7_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Confidentiality_DataCard4'.DataCardValue42.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Create New Risk Screen",
-                "type": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Confidentiality_DataCard1_1'.DataCardValue7_1"
+                "type": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Confidentiality_DataCard4'.DataCardValue42"
               }
             }
           ],
@@ -5832,19 +5832,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Likelihood_DataCard1_1'.DataCardValue13_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Likelihood_DataCard3'.DataCardValue43.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Likelihood_DataCard1_1'.DataCardValue13_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Likelihood_DataCard3'.DataCardValue43.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Create New Risk Screen",
-                "type": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Likelihood_DataCard1_1'.DataCardValue13_1"
+                "type": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Likelihood_DataCard3'.DataCardValue43"
               }
             }
           ],
@@ -5952,19 +5952,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Status_DataCard1_1'.DataCardValue17_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Status_DataCard3'.DataCardValue44.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Status_DataCard1_1'.DataCardValue17_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Status_DataCard3'.DataCardValue44.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Create New Risk Screen",
-                "type": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Status_DataCard1_1'.DataCardValue17_1"
+                "type": "'Create New Risk Screen'.'CNRS-CON-AddingRisk'.'ROS-OC-AR-FOR-AddingRiskForm_1'.'Risk Status_DataCard3'.DataCardValue44"
               }
             }
           ],

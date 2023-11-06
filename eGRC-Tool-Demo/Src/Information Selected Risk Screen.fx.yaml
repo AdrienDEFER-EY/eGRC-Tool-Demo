@@ -209,9 +209,9 @@
                             NavigateRiskRecord.RiskStatus = "BO",
                             NavigateRiskRecord.RiskBusinessOwner = User().Email
                         ),
-                        234
-                    ),
-                    155
+                        234,
+                        155
+                    )
                 )
             ZIndex: =12
 
