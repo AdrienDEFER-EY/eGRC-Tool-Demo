@@ -93,8 +93,7 @@
                         {
                             RiskStatus: "SPOC"
                         }
-                    ); 
-                    Refresh(RiskDatabaseFD)
+                    )
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3

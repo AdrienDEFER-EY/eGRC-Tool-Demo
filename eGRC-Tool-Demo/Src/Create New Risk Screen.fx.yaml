@@ -8,6 +8,7 @@
            "Marie.Levrau@be.ey.com",
            "Sander.Sienaert@be.ey.com"
         );
+        ResetForm('ROS-OC-AR-FOR-AddingRiskForm_1')
 
     "'CNRS-CON-RiskHumanFactor' As groupContainer.manualLayoutContainer":
         BorderThickness: =2
@@ -172,6 +173,9 @@
             DefaultMode: =FormMode.New
             Height: =624
             NumberOfColumns: =1
+            OnSuccess: |-
+                =false
+                //If('ROS-OC-AR-FOR-AddingRiskForm_1'.Valid, SubmitForm('ROS-OC-AR-FOR-AddingRiskForm_1'))
             Width: =Parent.Width
             Y: =67
             ZIndex: =1
@@ -1311,41 +1315,96 @@
                 Height: =67
                 HoverFill: =
                 OnSelect: |-
-                    =UpdateContext({GeneratedID: Text(RoundUp(Rand() * 100000, 0), "00000")});
-                    Set(NewRiskID, "ID" & GeneratedID);
-                    Patch(
-                        RiskDatabaseFD,
-                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                    =UpdateContext(
                         {
-                            RiskID: "ID" & GeneratedID,
-                            'Risk Name': DataCardValue14_1.Text, 
-                            'Department L1': DataCardValue46.Selected.Value,
-                            'Reason for Risk Closure': DataCardValue5_1.Text,
-                            'Risk Cause': DataCardValue6_1.Text,
-                            'Risk Confidentiality': DataCardValue42.Selected.Value,
-                            'Risk Description': DataCardValue8_1.Text,
-                            'Risk Group': DataCardValue55.Selected.Value,
-                            'Risk Level of Concern': DataCardValue11_1.Text,
-                            'Risk Likelihood': DataCardValue43.Selected.Value,
-                            'Risk Owner': DataCardValue15_1.Text,
-                            'Risk Severity': DataCardValue16_1.Text,
-                            'Risk Status': DataCardValue44.Selected.Value,
-                            'Risk Type Level I': DataCardValue50.Selected.Value,
-                            'Risk Type Level II': DataCardValue51.Selected.Value, 
-                            RiskTaxonomyLevel1: Dropdown_taxLevel0.Selected.Value, 
-                            RiskTaxonomyLevel2: Dropdown_taxLevel1.Selected.Value, 
-                            RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value, 
-                            RiskOwner: 'RO-InputEmail_1'.Selected.Value, 
-                            RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value, 
-                            RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
-                            'Date Created': Now(), 
-                            'Date Last Modified': Now(), 
-                            'Who Last Modified': User().FullName, 
-                            RiskStatus: "BO"
-                            
+                            GeneratedID: Text(
+                                RoundUp(
+                                    Rand() * 100000,
+                                    0
+                                ),
+                                "00000"
+                            )
                         }
                     );
-                    Navigate('Risk Overview Screen')
+                    Set(
+                        NewRiskID,
+                        "ID" & GeneratedID
+                    );
+                    If(
+                        DataCardValue44.Selected.Value = "Closed",
+                        If(
+                            (!IsBlank(DataCardValue14_1.Text) && !IsBlank(DataCardValue5_1.Text) && !IsBlank(DataCardValue6_1.Text) && !IsBlank(DataCardValue8_1.Text) && !IsBlank(DataCardValue11_1.Text) && !IsBlank(DataCardValue15_1.Text) && !IsBlank(DataCardValue16_1.Text)),
+                            Patch(
+                                RiskDatabaseFD,
+                                Defaults(RiskDatabaseFD),// Retain existing values in the record
+                                {
+                                    RiskID: "ID" & GeneratedID,
+                                    'Risk Name': DataCardValue14_1.Text,
+                                    'Department L1': DataCardValue46.Selected.Value,
+                                    'Reason for Risk Closure': DataCardValue5_1.Text,
+                                    'Risk Cause': DataCardValue6_1.Text,
+                                    'Risk Confidentiality': DataCardValue42.Selected.Value,
+                                    'Risk Description': DataCardValue8_1.Text,
+                                    'Risk Group': DataCardValue55.Selected.Value,
+                                    'Risk Level of Concern': DataCardValue11_1.Text,
+                                    'Risk Likelihood': DataCardValue43.Selected.Value,
+                                    'Risk Owner': DataCardValue15_1.Text,
+                                    'Risk Severity': DataCardValue16_1.Text,
+                                    'Risk Status': DataCardValue44.Selected.Value,
+                                    'Risk Type Level I': DataCardValue50.Selected.Value,
+                                    'Risk Type Level II': DataCardValue51.Selected.Value,
+                                    RiskTaxonomyLevel1: Dropdown_taxLevel0.Selected.Value,
+                                    RiskTaxonomyLevel2: Dropdown_taxLevel1.Selected.Value,
+                                    RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value,
+                                    RiskOwner: 'RO-InputEmail_1'.Selected.Value,
+                                    RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value,
+                                    RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
+                                    'Date Created': Now(),
+                                    'Date Last Modified': Now(),
+                                    'Who Last Modified': User().FullName,
+                                    RiskStatus: "BO"
+                                }
+                            );
+                            Navigate('Risk Overview Screen'),
+                            Notify("Fill in all required fields")
+                        ),
+                        If(
+                            (!IsBlank(DataCardValue14_1.Text) && !IsBlank(DataCardValue6_1.Text) && !IsBlank(DataCardValue8_1.Text) && !IsBlank(DataCardValue11_1.Text) && !IsBlank(DataCardValue15_1.Text) && !IsBlank(DataCardValue16_1.Text)),
+                            Patch(
+                                RiskDatabaseFD,
+                                Defaults(RiskDatabaseFD),// Retain existing values in the record
+                                {
+                                    RiskID: "ID" & GeneratedID,
+                                    'Risk Name': DataCardValue14_1.Text,
+                                    'Department L1': DataCardValue46.Selected.Value,
+                                    'Reason for Risk Closure': DataCardValue5_1.Text,
+                                    'Risk Cause': DataCardValue6_1.Text,
+                                    'Risk Confidentiality': DataCardValue42.Selected.Value,
+                                    'Risk Description': DataCardValue8_1.Text,
+                                    'Risk Group': DataCardValue55.Selected.Value,
+                                    'Risk Level of Concern': DataCardValue11_1.Text,
+                                    'Risk Likelihood': DataCardValue43.Selected.Value,
+                                    'Risk Owner': DataCardValue15_1.Text,
+                                    'Risk Severity': DataCardValue16_1.Text,
+                                    'Risk Status': DataCardValue44.Selected.Value,
+                                    'Risk Type Level I': DataCardValue50.Selected.Value,
+                                    'Risk Type Level II': DataCardValue51.Selected.Value,
+                                    RiskTaxonomyLevel1: Dropdown_taxLevel0.Selected.Value,
+                                    RiskTaxonomyLevel2: Dropdown_taxLevel1.Selected.Value,
+                                    RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value,
+                                    RiskOwner: 'RO-InputEmail_1'.Selected.Value,
+                                    RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value,
+                                    RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
+                                    'Date Created': Now(),
+                                    'Date Last Modified': Now(),
+                                    'Who Last Modified': User().FullName,
+                                    RiskStatus: "BO"
+                                }
+                            );
+                            Navigate('Risk Overview Screen'),
+                            Notify("Fill in all required fields")
+                        )
+                    )
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3
