@@ -52,6 +52,7 @@
 
         "'CNRS-HM-CON-LinkToRiskOverview_4' As groupContainer.manualLayoutContainer":
             Height: =67
+            Visible: =If(And(NavigateRiskRecord.RiskStatus = "BO", NavigateRiskRecord.RiskBusinessOwner = User().Email), true, false)
             Width: =Parent.Width
             Y: =155
             ZIndex: =9
@@ -77,12 +78,29 @@
                 Fill: =RGBA(255, 255, 255, 0)
                 Height: =67
                 HoverFill: =
+                OnSelect: |-
+                    =eGRCToolBusinessProcess.Run(
+                        NavigateRiskRecord.RiskSPOC,
+                        "Passing a risk (" & NavigateRiskRecord.RiskID & ") from BO to SPOC",
+                        NavigateRiskRecord.RiskBusinessOwner & " has passed you a risk (" & NavigateRiskRecord.RiskID & "), you become the SPOC for that risk",
+                        NavigateRiskRecord.RiskBusinessOwner,
+                        "Confirmation : Risk passed to a SPOC",
+                        "You have successfuly passed a risk (" & NavigateRiskRecord.RiskID & ") to the SPOC with email address : " & NavigateRiskRecord.RiskSPOC
+                    );
+                    Patch(
+                        RiskDatabaseFD,
+                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                        {
+                            RiskStatus: "SPOC"
+                        }
+                    )
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3
 
         "'CNRS-HM-CON-LinkToRiskOverview_5' As groupContainer.manualLayoutContainer":
             Height: =67
+            Visible: =If(And(NavigateRiskRecord.RiskStatus = "SPOC", NavigateRiskRecord.RiskSPOC = User().Email), true, false)
             Width: =Parent.Width
             Y: =234
             ZIndex: =10
@@ -108,12 +126,29 @@
                 Fill: =RGBA(255, 255, 255, 0)
                 Height: =67
                 HoverFill: =
+                OnSelect: |-
+                    =eGRCToolBusinessProcess.Run(
+                        NavigateRiskRecord.RiskBusinessOwner,
+                        "Passing a risk (" & NavigateRiskRecord.RiskID & ") back from SPOC to BO",
+                        NavigateRiskRecord.RiskSPOC & " has passed you a risk back (" & NavigateRiskRecord.RiskID & "), you become the business owner for that risk",
+                        NavigateRiskRecord.RiskSPOC,
+                        "Confirmation : Risk passed back to a BO",
+                        "You have successfuly passed a risk back (" & NavigateRiskRecord.RiskID & ") to the BO with email address : " & NavigateRiskRecord.RiskBusinessOwner
+                    );
+                    Patch(
+                        RiskDatabaseFD,
+                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                        {
+                            RiskStatus: "BO"
+                        }
+                    )
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3
 
         "'CNRS-HM-CON-LinkToRiskOverview_6' As groupContainer.manualLayoutContainer":
             Height: =67
+            Visible: =If(And(NavigateRiskRecord.RiskStatus = "SPOC", NavigateRiskRecord.RiskSPOC = User().Email), true, false)
             Width: =Parent.Width
             Y: =155
             ZIndex: =11
@@ -139,6 +174,22 @@
                 Fill: =RGBA(255, 255, 255, 0)
                 Height: =67
                 HoverFill: =
+                OnSelect: |-
+                    =eGRCToolBusinessProcess.Run(
+                        NavigateRiskRecord.RiskOwner,
+                        "Passing a risk (" & NavigateRiskRecord.RiskID & ") from SPOC to RO",
+                        NavigateRiskRecord.RiskSPOC & " has passed you a risk (" & NavigateRiskRecord.RiskID & "), you become the risk owner for that risk",
+                        NavigateRiskRecord.RiskSPOC,
+                        "Confirmation : Risk passed to a RO",
+                        "You have successfuly passed a risk (" & NavigateRiskRecord.RiskID & ") to the RO with email address : " & NavigateRiskRecord.RiskOwner
+                    );
+                    Patch(
+                        RiskDatabaseFD,
+                        Defaults(RiskDatabaseFD),  // Retain existing values in the record
+                        {
+                            RiskStatus: "RO"
+                        }
+                    )
                 Text: =
                 Width: =Parent.Width
                 ZIndex: =3
@@ -146,7 +197,22 @@
         "'CNRS-HM-CON-LinkToRiskOverview_7' As groupContainer.manualLayoutContainer":
             Height: =67
             Width: =Parent.Width
-            Y: =313
+            Y: |-
+                =If(
+                    And(
+                        NavigateRiskRecord.RiskStatus = "SPOC",
+                        NavigateRiskRecord.RiskSPOC = User().Email
+                    ),
+                    313,
+                    If(
+                        And(
+                            NavigateRiskRecord.RiskStatus = "BO",
+                            NavigateRiskRecord.RiskBusinessOwner = User().Email
+                        ),
+                        234
+                    ),
+                    155
+                )
             ZIndex: =12
 
             "'CNRS-HM-AB-ICO-LinkToRiskOverview_53' As icon.Bookmark":
