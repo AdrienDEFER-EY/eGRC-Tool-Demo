@@ -52,7 +52,7 @@
 
         "'CNRS-HM-CON-LinkToRiskOverview_4' As groupContainer.manualLayoutContainer":
             Height: =67
-            Visible: =If(And(NavigateRiskRecord.RiskStatus = "BO", NavigateRiskRecord.RiskBusinessOwner = User().Email), true, false)
+            Visible: =If(And(NavigateRiskRecord.RiskStatus2 = "BO", NavigateRiskRecord.RiskBusinessOwner = User().Email), true, false)
             Width: =Parent.Width
             Y: =155
             ZIndex: =9
@@ -91,7 +91,7 @@
                         RiskDatabaseFD,
                         NavigateRiskRecord,  // Retain existing values in the record
                         {
-                            RiskStatus: "SPOC"
+                            RiskStatus2: "SPOC"
                         }
                     )
                 Text: =
@@ -139,7 +139,7 @@
                         RiskDatabaseFD,
                         NavigateRiskRecord,  // Retain existing values in the record
                         {
-                            RiskStatus: "BO"
+                            RiskStatus2: "BO"
                         }
                     )
                 Text: =
@@ -176,18 +176,18 @@
                 HoverFill: =
                 OnSelect: |-
                     =eGRCToolBusinessProcess.Run(
-                        NavigateRiskRecord.RiskOwner,
+                        NavigateRiskRecord.RiskOwner2,
                         "Passing a risk (" & NavigateRiskRecord.RiskID & ") from SPOC to RO",
                         NavigateRiskRecord.RiskSPOC & " has passed you a risk (" & NavigateRiskRecord.RiskID & "), you become the risk owner for that risk",
                         NavigateRiskRecord.RiskSPOC,
                         "Confirmation : Risk passed to a RO",
-                        "You have successfuly passed a risk (" & NavigateRiskRecord.RiskID & ") to the RO with email address : " & NavigateRiskRecord.RiskOwner
+                        "You have successfuly passed a risk (" & NavigateRiskRecord.RiskID & ") to the RO with email address : " & NavigateRiskRecord.RiskOwner2
                     );
                     Patch(
                         RiskDatabaseFD,
                         NavigateRiskRecord,  // Retain existing values in the record
                         {
-                            RiskStatus: "RO"
+                            RiskStatus2: "RO"
                         }
                     )
                 Text: =

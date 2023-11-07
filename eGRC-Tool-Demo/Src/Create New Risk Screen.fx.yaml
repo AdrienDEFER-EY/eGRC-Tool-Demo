@@ -1365,13 +1365,13 @@
                                     RiskTaxonomyLevel1: Dropdown_taxLevel0.Selected.Value,
                                     RiskTaxonomyLevel2: Dropdown_taxLevel1.Selected.Value,
                                     RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value,
-                                    RiskOwner: 'RO-InputEmail_1'.Selected.Value,
+                                    RiskOwner2: 'RO-InputEmail_1'.Selected.Value,
                                     RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value,
                                     RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
                                     'Date Created': Now(),
                                     'Date Last Modified': Now(),
                                     'Who Last Modified': User().FullName,
-                                    RiskStatus: "BO"
+                                    RiskStatus2: "BO"
                                 }
                             );
                             Navigate('Risk Overview Screen'),
@@ -1401,13 +1401,13 @@
                                     RiskTaxonomyLevel1: Dropdown_taxLevel0.Selected.Value,
                                     RiskTaxonomyLevel2: Dropdown_taxLevel1.Selected.Value,
                                     RiskTaxonomyLevel3: Dropdown_taxLevel2.Selected.Value,
-                                    RiskOwner: 'RO-InputEmail_1'.Selected.Value,
+                                    RiskOwner2: 'RO-InputEmail_1'.Selected.Value,
                                     RiskSPOC: 'SPOC-InputEmail_1'.Selected.Value,
                                     RiskBusinessOwner: 'BO-InputEmail_1'.Selected.Value,
                                     'Date Created': Now(),
                                     'Date Last Modified': Now(),
                                     'Who Last Modified': User().FullName,
-                                    RiskStatus: "BO"
+                                    RiskStatus2: "BO"
                                 }
                             );
                             Navigate('Risk Overview Screen'),
