@@ -15,7 +15,8 @@
         UpdateContext({EditOption: false});
         
         ClearCollect(ControlIdsFiltered, {});
-        ClearCollect(ControlIdsFiltered,Filter(RelationRC_DB, RiskID = 'GAL-ROGallery'.Selected.RiskID).ControlID)
+        //ClearCollect(ControlIdsFiltered,Filter(RelationRC_DB, RiskID = 'GAL-ROGallery'.Selected.RiskID).ControlID)
+        ClearCollect(ControlIdsFiltered,Filter(RelationRC_DB, RiskID = 'ROS-GAL-Gallery'.Selected.RiskID).ControlID)
 
     "'ROS-CON-ScreenHeader' As groupContainer.manualLayoutContainer":
         Height: =76

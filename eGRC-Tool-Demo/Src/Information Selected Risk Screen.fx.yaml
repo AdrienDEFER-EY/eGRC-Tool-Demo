@@ -100,7 +100,7 @@
 
         "'CNRS-HM-CON-LinkToRiskOverview_5' As groupContainer.manualLayoutContainer":
             Height: =67
-            Visible: =If(And(NavigateRiskRecord.RiskStatus = "SPOC", NavigateRiskRecord.RiskSPOC = User().Email), true, false)
+            Visible: =If(And(NavigateRiskRecord.RiskStatus2 = "SPOC", NavigateRiskRecord.RiskSPOC = User().Email), true, false)
             Width: =Parent.Width
             Y: =234
             ZIndex: =10
@@ -148,7 +148,7 @@
 
         "'CNRS-HM-CON-LinkToRiskOverview_6' As groupContainer.manualLayoutContainer":
             Height: =67
-            Visible: =If(And(NavigateRiskRecord.RiskStatus = "SPOC", NavigateRiskRecord.RiskSPOC = User().Email), true, false)
+            Visible: =If(And(NavigateRiskRecord.RiskStatus2 = "SPOC", NavigateRiskRecord.RiskSPOC = User().Email), true, false)
             Width: =Parent.Width
             Y: =155
             ZIndex: =11
@@ -200,13 +200,13 @@
             Y: |-
                 =If(
                     And(
-                        NavigateRiskRecord.RiskStatus = "SPOC",
+                        NavigateRiskRecord.RiskStatus2 = "SPOC",
                         NavigateRiskRecord.RiskSPOC = User().Email
                     ),
                     313,
                     If(
                         And(
-                            NavigateRiskRecord.RiskStatus = "BO",
+                            NavigateRiskRecord.RiskStatus2 = "BO",
                             NavigateRiskRecord.RiskBusinessOwner = User().Email
                         ),
                         234,
@@ -228,7 +228,7 @@
             "'ROS-HM-AB-LBL-AddButtonLabel_24' As label":
                 Height: =67
                 Text: |-
-                    ="Risk state : " & NavigateRiskRecord.RiskStatus
+                    ="Risk state : " & NavigateRiskRecord.RiskStatus2
                 Width: =Parent.Width - 88
                 X: =88
                 ZIndex: =2
